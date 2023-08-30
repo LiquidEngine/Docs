@@ -58,13 +58,13 @@ const config = {
       navbar: {
         title: "Liquid Engine",
         logo: {
-          alt: "My Site Logo",
+          alt: "Liquid Engine",
           src: "img/logo.svg",
         },
         items: [
           {
             type: "docSidebar",
-            sidebarId: "editorSidebar",
+            sidebarId: "manualSidebar",
             position: "left",
             label: "Editor manual",
           },
@@ -89,7 +89,7 @@ const config = {
             items: [
               {
                 label: "Editor manual",
-                to: "/docs/editor",
+                to: "/docs/manual",
               },
               {
                 label: "Lua API",
