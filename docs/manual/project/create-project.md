@@ -8,4 +8,4 @@ Projects can be created by clicking the "Create project" button in project selec
 
 ![Create a project](../../../static/img/editor/project/create-project.png)
 
-When you type a project name, it will automatically create a new directory and a project file with extension `.liquid`.
+When you type a project name, it will automatically create a new directory and a project file with extension `.Quoll`.

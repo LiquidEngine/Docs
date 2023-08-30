@@ -6,20 +6,20 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Liquid engine",
+  title: "Quoll engine",
   tagline: "Easy to use game engine",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://liquid-engine-five.vercel.app/",
+  url: "https://quoll-engine-five.vercel.app/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "LiquidEngine", // Usually your GitHub org/user name.
-  projectName: "LiquidEngine", // Usually your repo name.
+  organizationName: "QuollEngine", // Usually your GitHub org/user name.
+  projectName: "QuollEngine", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -56,9 +56,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "Liquid Engine",
+        title: "Quoll Engine",
         logo: {
-          alt: "Liquid Engine",
+          alt: "Quoll Engine",
           src: "img/logo.svg",
         },
         items: [
@@ -75,7 +75,7 @@ const config = {
             label: "Scripting API",
           },
           {
-            href: "https://github.com/LiquidEngine/LiquidEngine",
+            href: "https://github.com/QuollEngine/QuollEngine",
             label: "GitHub",
             position: "right",
           },
@@ -102,12 +102,12 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/LiquidEngine/LiquidEngine",
+                href: "https://github.com/QuollEngine/QuollEngine",
               },
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Liquid Engine. Built by Gasim Gasimzada`,
+        copyright: `© ${new Date().getFullYear()} Quoll Engine. Built by Gasim Gasimzada`,
       },
       prism: {
         theme: lightCodeTheme,

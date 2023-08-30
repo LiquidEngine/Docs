@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # Project structure
 
-Every liquid project has the following structure:
+Every quoll project has the following structure:
 
 ```
 /assets
 /cache
 /settings
-/[name].liquid
+/[name].quoll
 /.gitignore
 ```
 
