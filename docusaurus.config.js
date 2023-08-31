@@ -38,6 +38,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          versions: {
+            current: {
+              label: "Prealpha",
+            },
+          },
           sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
@@ -73,6 +78,10 @@ const config = {
             sidebarId: "scriptingSidebar",
             position: "left",
             label: "Scripting API",
+          },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
           },
           {
             href: "https://github.com/QuollEngine/QuollEngine",

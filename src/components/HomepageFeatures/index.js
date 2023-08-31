@@ -6,7 +6,7 @@ const FeatureList = [
   {
     title: "Easy to use",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: <>Quoll engine is defined with simplicity in mind.</>,
+    description: <>Quoll engine is designed with simplicity in mind.</>,
   },
   {
     title: "Built-in editor",
