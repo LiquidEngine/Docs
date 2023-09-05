@@ -8,7 +8,7 @@ Cameras are the entry point for rendering the scene. What a player sees in a gam
 
 We currently only support perspective camera for rendering the scene. The perspective camera properties are based on real-world, physical camera properties:
 
-![Camera](../../../static/img/editor/working-with-entities/perspective-camera.png
+![Camera](../../../static/img/editor/working-with-entities/perspective-camera.png)
 
 ## Defining view matrix
 
