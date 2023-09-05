@@ -62,6 +62,12 @@ output:
   animation: f6a58a00b3ed40c1bd55fcae4133adff # UUID of animation
 ```
 
+:::note Finding UUIDs
+
+In order to make it easier to find UUIDs, you can right click on any asset in the asset browser and click "Copy UUID". This will copy the UUID to your systems clipboard.
+
+:::
+
 ### Transitions
 
 List of transitions from the state are defined in the `on` field. Each transition is an object with the following structure:
