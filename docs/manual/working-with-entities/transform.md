@@ -8,11 +8,11 @@ Entity transforms consist of two components -- local transform and world transfo
 
 ![Transform component](../../../static/img/editor/working-with-entities/transform.png)
 
-### Local transform
+## Local transform
 
 The local transform component consists of three elements -- position (XYZ), rotation, and scale (XYZ). Internally, the rotation is stored as quaternion. However, to make setting rotation easier, the UI allows modifying the rotation using Euler angles.
 
-### World transform calculation
+## World transform calculation
 
 If entity has no parent (i.e is a root entity), the world transform will be equal to the local transform:
 

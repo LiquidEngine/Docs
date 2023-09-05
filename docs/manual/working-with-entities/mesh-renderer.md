@@ -8,15 +8,15 @@ Mesh renderers are used to render meshes in the scene. There are two types of me
 
 ![Mesh renderer component](../../../static/img/editor/working-with-entities/mesh-renderer.png)
 
-### Static mesh renderers
+## Static mesh renderers
 
 Static mesh renderers are used to render the static meshes that are attached to the entity. This component requires that the mesh component references a static mesh.
 
-### Skinned mesh renderers
+## Skinned mesh renderers
 
 Skinned mesh renderers are used to render the skinned meshes that are attached to the entity. This component requires that the mesh component references a skinned mesh and the entity has a skeleton component. Otherwise, the mesh will not be rendered on the scene.
 
-### Materials
+## Materials
 
 The mesh renderer allows modifying materials of a mesh. The materials use a slot based system where each slots represents a submesh of a mesh.
 
