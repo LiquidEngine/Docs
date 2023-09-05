@@ -43,6 +43,7 @@ const config = {
               label: "Prealpha",
             },
           },
+          editUrl: "https://github.com/QuollEngine/Docs/edit/main",
           sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
