@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Entity transforms consist of two components -- local transform and world transform. The local transform component represents the position, rotation, and scale of a component relative to a parent. **Local transform can be modified via UI or the scripting interface.** The world transform component represents the final calculated transform of an entity in the world. **This value is always automatically calculated from local transform and cannot be modified.**
 
-![Transform component](../../../static/img/editor/working-with-entities/transform.png)
+![Transform component](./img/transform.png)
 
 ## Local transform
 

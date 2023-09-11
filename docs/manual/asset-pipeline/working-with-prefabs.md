@@ -12,4 +12,4 @@ Once prefabs are spawned in the scene, they are stored in the scene as separate 
 
 If you want to view contents of a prefab, you can right click on a prefab in the asset browser and click "View contents". This will open prefab like a directory and display all the **assets** that are available in the prefab.
 
-![Prefab view contents](../../../static/img/editor/asset-pipeline/prefab-view-contents.png)
+![Prefab view contents](./img/prefab-view-contents.png)

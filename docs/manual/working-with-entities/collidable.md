@@ -6,7 +6,7 @@ sidebar_position: 13
 
 Collidable component adds physical colladible properties to the entity and includes the entity in collision tests.
 
-![Collidable](../../../static/img/editor/working-with-entities/collidable.png)
+![Collidable](./img/collidable.png)
 
 You can set the collidable shape, friction, and restitution properties.
 

@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Mesh renderers are used to render meshes in the scene. There are two types of mesh renderers -- static mesh renderers (called "Mesh renderer") and skinned mesh renderers.
 
-![Mesh renderer component](../../../static/img/editor/working-with-entities/mesh-renderer.png)
+![Mesh renderer component](./img/mesh-renderer.png)
 
 ## Static mesh renderers
 

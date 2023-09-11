@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Importing assets
 
-![Asset pipeline](../../../static/img/editor/asset-pipeline/asset-pipeline.png)
+![Asset pipeline](./img/asset-pipeline.png)
 
 Firstly, it creates engine optimized assets and stores them in **cache** directory. One file can create more than one engine optimized asset file. For example, GLTF files can creates individual animation, mesh, material assets.
 

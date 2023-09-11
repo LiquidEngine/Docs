@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Asset browser shows all the assets that you have in your engine.
 
-![Asset browser](../../../static/img/editor/asset-pipeline/asset-browser.png)
+![Asset browser](./img/asset-browser.png)
 
 ## Importing assets
 

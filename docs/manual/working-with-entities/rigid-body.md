@@ -6,7 +6,7 @@ sidebar_position: 15
 
 Rigid bodies are undeformable physics objects that are affected by external forces.
 
-![Rigid bodies](../../../static/img/editor/working-with-entities/rigid-body.png)
+![Rigid bodies](./img/rigid-body.png)
 
 Rigid bodies have mass and intertia. You cannot apply forces to rigid body from the editor.
 

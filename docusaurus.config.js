@@ -32,6 +32,19 @@ const config = {
     locales: ["en"],
   },
 
+  plugins: [
+    async function tailwind(context, options) {
+      return {
+        name: "docusaurus-tailwind",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss")),
+            postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+
   presets: [
     [
       "classic",
@@ -59,6 +72,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {

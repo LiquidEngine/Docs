@@ -6,7 +6,7 @@ sidebar_position: 17
 
 Scripting component allows running custom scripts in the scene.
 
-![Scripting](../../../static/img/editor/working-with-entities/scripting.png)
+![Scripting](./img/scripting.png)
 
 You can create or update a script by dragging a script asset into the drag and drop area.
 

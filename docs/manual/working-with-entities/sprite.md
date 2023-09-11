@@ -6,6 +6,6 @@ sidebar_position: 7
 
 Sprites represent 2D images on the board.
 
-![Sprite component](../../../static/img/editor/working-with-entities/sprite.png)
+![Sprite component](./img/sprite.png)
 
 You can drag an image to the drag and drop area to create or update a sprite.

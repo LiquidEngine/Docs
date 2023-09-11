@@ -8,13 +8,13 @@ Cameras are the entry point for rendering the scene. What a player sees in a gam
 
 We currently only support perspective camera for rendering the scene. The perspective camera properties are based on real-world, physical camera properties:
 
-![Camera](../../../static/img/editor/working-with-entities/perspective-camera.png)
+![Camera](./img/perspective-camera.png)
 
 ## Defining view matrix
 
 The camera's view matrix can be calculated by moving the camera around the scene. The camera's up vector is shown by the arrow on the gizmo:
 
-![Camera gizmo up vector](../../../static/img/editor/working-with-entities/camera-gizmo-up-vector.png)
+![Camera gizmo up vector](./img/camera-gizmo-up-vector.png)
 
 ## Defining projection matrix
 
@@ -26,7 +26,7 @@ The field of view is calculated based on sensor size and focal length. To be pre
 
 To make a camera be the starting camera of the scene, click the "Set starting camera" button:
 
-![Set as starting camera](../../../static/img/editor/working-with-entities/camera-set-as-starting-camera.png)
+![Set as starting camera](./img/camera-set-as-starting-camera.png)
 
 ## Defining exposure
 
@@ -70,7 +70,7 @@ Slow shutter speed means that the camera is still receiving light and has not ca
 
 However, motion blur can also be used to blur the scene for artistic purposes. For example, the effect of cars looking like light beams in the photo below is a result of slow shutter speeds:
 
-![Shutter speed example](../../../static/img/editor/working-with-entities/shutter-speed-example.png)
+![Shutter speed example](./img/shutter-speed-example.png)
 
 ### ISO
 
