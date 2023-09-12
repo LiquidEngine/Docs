@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Working with animators
 
-:::warning WIP Animator UI
+:::caution WIP Animator UI
 
 Current priority of the engine is to provide a node based UI to define animator states and transitions. In the meantime, you can use the animator by modifying the YAML file directly.
 
@@ -62,7 +62,7 @@ output:
   animation: f6a58a00b3ed40c1bd55fcae4133adff # UUID of animation
 ```
 
-:::note Finding UUIDs
+:::info Finding UUIDs
 
 In order to make it easier to find UUIDs, you can right click on any asset in the asset browser and click "Copy UUID". This will copy the UUID to your systems clipboard.
 
@@ -80,7 +80,7 @@ target: AttackChop # Target state
 
 **`target`** field **must always** point to the state that exists in the animator YAML file. The `event` field represents the event that that triggers the transition.
 
-:::important Important note on event names
+:::info Important note on event names
 
 Event names are what allows switching animations from the scripting system. Make sure to write names that are human readable to make it easier to understand.
 

@@ -42,7 +42,7 @@ In photography, f-stops are typically displayed as `f/{Value}`. Example: `f/22`,
 
 **Depth of field**
 
-:::warning Work in progress
+:::caution Work in progress
 
 At the moment, depth of field effect does not exist in engine but it is planned to be implemented.
 
@@ -60,7 +60,7 @@ Shutter speed values are typically defined in `1/{Value} seconds`. The word "spe
 
 **Motion blur:**
 
-:::warning Work in progress
+:::caution Work in progress
 
 At the moment, motion blur effect does not exist in engine but it is planned to be implemented.
 
@@ -82,7 +82,7 @@ ISO is defined by whole numbers such as `ISO 200`, `ISO 500` `ISO 2000` etc. You
 
 **Film grain**
 
-:::warning Work in progress
+:::caution Work in progress
 
 At the moment, motion film grain effect does not exist in engine but it is planned to be implemented.
 

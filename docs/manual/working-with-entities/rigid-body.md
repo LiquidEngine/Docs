@@ -14,7 +14,7 @@ Rigid bodies have mass and intertia. You cannot apply forces to rigid body from 
 
 Gravity is a special force in the engine that automatically applies gravitational force to the object:
 
-:::warning Work in progress
+:::caution Work in progress
 
 At the moment, gravity is always calculated using -9.8 and cannot be modified at this time.
 
