@@ -154,10 +154,10 @@ function processAdmonitionProps(props) {
 
 const admonitionClasses = {
   note: "bg-white-200",
-  tip: "bg-yellow-200",
-  info: "bg-blue-200",
-  caution: "bg-orange-200",
-  danger: "bg-red-200",
+  tip: "bg-yellow-200 dark:text-black",
+  info: "bg-blue-200 dark:text-black",
+  caution: "bg-orange-200 dark:text-black",
+  danger: "bg-red-200 dark:text-black",
 };
 
 export default function Admonition(props) {
