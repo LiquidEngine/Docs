@@ -1,6 +1,6 @@
 # Working with input maps
 
-:::note WIP Input Map UI
+:::caution WIP Input Map UI
 
 Current priority of the engine is to provide a table based UI to define the input commands, bindings, and schemes. In the meantime, you can use the input map by modifying the YAML file directly.
 
