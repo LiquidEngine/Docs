@@ -40,6 +40,8 @@ CollisionHit {
 }
 ```
 
+If no collidable does not have collision, the returned value is `nil`.
+
 ---
 
 ### `set_default_material(): void` {#set_default_material}
