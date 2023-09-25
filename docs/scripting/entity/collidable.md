@@ -8,6 +8,40 @@ Collidable API allows modifying the collidable shape and material of an entity.
 
 ## Reference
 
+### `sweep(dx: number, dy: number, dz: number, distance: number): boolean, CollisionHit` {#sweep}
+
+Perform sweep test with collidable against other collidables in a given direction that have querying enabled.
+
+```lua
+collided, info = entity.collidable:sweep(0.0, 0.0, 1.0, 0.2)
+
+if collided then
+  logger.log(info.normal.x, info.normal.y, info.normal.z)
+end
+```
+
+**Parameters:**
+
+- `dx`: Direction vector x axis
+- `dx`: Direction vector x axis
+- `dx`: Direction vector x axis
+- `distance`: Collision distance
+
+**Return:**
+
+This function returns two values:
+
+1. First value is a boolean value that checks if there was a collision (`true` if collided, `false` otherwise)
+2. Second value provides information about the collision hit. This object has the following structure:
+
+```ts
+CollisionHit {
+  normal: { x: number, y: number, z: number }
+}
+```
+
+---
+
 ### `set_default_material(): void` {#set_default_material}
 
 Set default collidable material. Default material has the following values:
