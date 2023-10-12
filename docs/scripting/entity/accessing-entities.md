@@ -25,7 +25,7 @@ You can also query entities using the entity query (`entity_query`).
 Queries entities by name and retrieves the first found result:
 
 ```lua
-found = entity_query.get_first_entity_by_name("Test")
+found = entity_query:get_first_entity_by_name("Test")
 ```
 
 **Parameters**
@@ -46,7 +46,7 @@ Spawns empty entity. The spawned entity is automatically assigned a name and loc
 
 ```lua
 function start()
-    my_entity = entity_spawner.spawn_empty()
+    my_entity = entity_spawner:spawn_empty()
 end
 ```
 
@@ -62,7 +62,7 @@ Spawns prefab to the scene.
 prefab = input_vars.register('prefab', input_vars.types.AssetPrefab)
 
 function start()
-    my_entity = entity_spawner.spawn_prefab(prefab)
+    my_entity = entity_spawner:spawn_prefab(prefab)
 end
 ```
 
@@ -82,7 +82,7 @@ Spawns prefab to the scene.
 texture = input_vars.register('texture', input_vars.types.AssetTexture)
 
 function start()
-    my_entity = entity_spawner.spawn_prefab(texture)
+    my_entity = entity_spawner:spawn_prefab(texture)
 end
 ```
 

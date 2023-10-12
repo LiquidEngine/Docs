@@ -65,7 +65,7 @@ Moment of inertia of rigid body. The function returns three values -- inertia in
 Set moment of inertia inertia of rigid body.
 
 ```lua
-entity.rigid_body.set_inertia(0.2, 0.5, 0.2)
+entity.rigid_body:set_inertia(0.2, 0.5, 0.2)
 ```
 
 **Parameters:**
