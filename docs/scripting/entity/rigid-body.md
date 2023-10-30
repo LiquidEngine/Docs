@@ -114,6 +114,20 @@ entity.rigid_body:apply_force(100.0, 0.0, -20.0)
 - `y`: Force in y direction. The value is measured in Newtons.
 - `z`: Force in z direction. The value is measured in Newtons.
 
+### `apply_impulse(x: number, y: number, z: number): void` {#apply_impulse}
+
+Apply impulse **once.**
+
+```lua
+entity.rigid_body:apply_impulse(100.0, 0.0, -20.0)
+```
+
+**Parameters:**
+
+- `x`: Impulse in x direction. The value is measured in Newtons x s.
+- `y`: Impulse in y direction. The value is measured in Newtons x s .
+- `z`: Impulse in z direction. The value is measured in Newtons x s.
+
 ### `apply_torque(x: number, y: number, z: number): void` {#apply_torque}
 
 Apply torque **once.** If you want to apply the torque continuously, you need to apply it on every update.
