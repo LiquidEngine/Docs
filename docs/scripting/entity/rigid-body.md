@@ -27,7 +27,7 @@ entity.rigid_body:set_default_params()
 Get mass of rigid body.
 
 ```lua
-mass = entity.rigid_body.get_mass()
+local mass = entity.rigid_body.get_mass()
 ```
 
 **Returns:**
@@ -53,7 +53,7 @@ entity.rigid_body.set_mass(5.0)
 Get moment of inertia of rigid body.
 
 ```lua
-x, y, z = entity.rigid_body.get_inertia()
+local x, y, z = entity.rigid_body.get_inertia()
 ```
 
 **Returns:**
@@ -79,7 +79,7 @@ entity.rigid_body:set_inertia(0.2, 0.5, 0.2)
 ### `is_gravity_applied(): boolean` {#is_gravity_applied}
 
 ```lua
-is_gravity_applied = entity.rigid_body:is_gravity_applied()
+local is_gravity_applied = entity.rigid_body:is_gravity_applied()
 ```
 
 **Returns:**

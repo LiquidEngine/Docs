@@ -10,8 +10,8 @@ This event is triggered when any key is pressed by the user.
 
 ```lua
 function on_key_press(event)
-  key = event.key
-  mods = event.mods
+  local key = event.key
+  local mods = event.mods
 end
 ```
 
@@ -26,8 +26,8 @@ This event is triggered when any key is released by the user.
 
 ```lua
 function on_key_press(event)
-  key = event.key
-  mods = event.mods
+  local key = event.key
+  local mods = event.mods
 end
 ```
 

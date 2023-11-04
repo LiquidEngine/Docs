@@ -13,10 +13,10 @@ Input map API allows accessing input commands and their values as well as switch
 Gets command in the input map. If command is not found, `null` will be returned.
 
 ```lua
-command = entity.input:get_command("Move")
+local command = entity.input:get_command("Move")
 ```
 
-Ideally, this function should be called on `start`.
+We recommend to call this function when script starts instead of during update.
 
 **Parameters:**
 
@@ -33,9 +33,9 @@ Internal representation of command.
 Retrieves command value as boolean:
 
 ```lua
-command = entity.input:get_command("Jump")
+local command = entity.input:get_command("Jump")
 
-value = entity.input:get_value_boolean(command)
+local value = entity.input:get_value_boolean(command)
 ```
 
 **Parameters:**
@@ -59,9 +59,9 @@ Alias of [`get_value_boolean`](#get_value_boolean)
 Retrieves command value as Axis 2D:
 
 ```lua
-command = entity.input:get_command("Move")
+local command = entity.input:get_command("Move")
 
-x, y = entity.input:get_value_axis_2d(command)
+local x, y = entity.input:get_value_axis_2d(command)
 ```
 
 **Parameters:**

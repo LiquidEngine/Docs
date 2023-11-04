@@ -21,7 +21,7 @@ entity.audio:play()
 Check if audio is current playing.
 
 ```lua
-is_playing = entity.audio:is_playing()
+local is_playing = entity.audio:is_playing()
 ```
 
 **Returns:**

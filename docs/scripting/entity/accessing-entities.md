@@ -11,9 +11,7 @@ There are three ways to access entities from scripts.
 All scripts are attached are attached to entities. If you want to access the entity that the script belongs to, you can access it by using the globally accessible `entity` object:
 
 ```lua
-function start()
-    name = entity.name:get()
-end
+local name = entity.name:get()
 ```
 
 ## Querying entities
@@ -25,7 +23,7 @@ You can also query entities using the entity query (`entity_query`).
 Queries entities by name and retrieves the first found result:
 
 ```lua
-found = entity_query:get_first_entity_by_name("Test")
+local found = entity_query:get_first_entity_by_name("Test")
 ```
 
 **Parameters**
@@ -45,9 +43,7 @@ You can also spawn entities using the entity spawner (`entity_spawner`).
 Spawns empty entity. The spawned entity is automatically assigned a name and local position.
 
 ```lua
-function start()
-    my_entity = entity_spawner:spawn_empty()
-end
+local my_entity = entity_spawner:spawn_empty()
 ```
 
 **Returns:**
@@ -59,11 +55,9 @@ Entity object representing the newly spawned prefab.
 Spawns prefab to the scene.
 
 ```lua
-prefab = input_vars.register('prefab', input_vars.types.AssetPrefab)
+local prefab = input_vars.register('prefab', input_vars.types.AssetPrefab)
 
-function start()
-    my_entity = entity_spawner:spawn_prefab(prefab)
-end
+local my_entity = entity_spawner:spawn_prefab(prefab)
 ```
 
 **Parameters:**
@@ -79,11 +73,9 @@ Entity object representing the **root** entity of newly spawned prefab.
 Spawns prefab to the scene.
 
 ```lua
-texture = input_vars.register('texture', input_vars.types.AssetTexture)
+local texture = input_vars.register('texture', input_vars.types.AssetTexture)
 
-function start()
-    my_entity = entity_spawner:spawn_prefab(texture)
-end
+local my_entity = entity_spawner:spawn_prefab(texture)
 ```
 
 **Parameters:**

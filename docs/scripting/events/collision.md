@@ -14,7 +14,7 @@ This event is triggered at the start of event colliding with another entity.
 
 ```lua
 function on_collision_start()
-  collided_with = collision.target
+  local collided_with = collision.target
 end
 ```
 
@@ -28,7 +28,7 @@ This event is triggered at the end of event colliding with another entity.
 
 ```lua
 function on_collision_end()
-  collided_with = collision.target
+  local collided_with = collision.target
 end
 ```
 

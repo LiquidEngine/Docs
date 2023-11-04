@@ -15,11 +15,9 @@ You can register the variables using the provided `input_vars.register` function
 This is the main method to register variables in scripts for injection.
 
 ```lua
-rock_prefab = input_vars.register('rock', input_vars.types.AssetPrefab)
+local rock_prefab = input_vars.register('rock', input_vars.types.AssetPrefab)
 
-function start()
-  entity_spawner.spawnPrefab(rock_prefab)
-end
+entity_spawner.spawnPrefab(rock_prefab)
 ```
 
 **Parameters:**
@@ -42,7 +40,7 @@ Make sure to register the variables only as a global variables. Registering vari
 ### `input_vars.types.String` {#string}
 
 ```lua
-value = input_vars.register('test', input_vars.types.String)
+local value = input_vars.register('test', input_vars.types.String)
 ```
 
 **Returns:**
@@ -56,7 +54,7 @@ String value.
 ### `input_vars.types.AssetPrefab` {#asset-prefab}
 
 ```lua
-value = input_vars.register('test', input_vars.types.AssetPrefab)
+local value = input_vars.register('test', input_vars.types.AssetPrefab)
 ```
 
 **Returns:**
@@ -70,7 +68,7 @@ Numeric internal ID representing prefab.
 ### `input_vars.types.AssetPrefab` {#asset-texture}
 
 ```lua
-value = input_vars.register('test', input_vars.types.AssetTexture)
+local value = input_vars.register('test', input_vars.types.AssetTexture)
 ```
 
 **Returns:**

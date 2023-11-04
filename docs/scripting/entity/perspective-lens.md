@@ -13,7 +13,7 @@ Perspective lens API provides methods to access and modify perspective lens comp
 Get perspective near plane.
 
 ```lua
-near = entity.perspective_lens:get_near()
+local near = entity.perspective_lens:get_near()
 ```
 
 **Returns:**
@@ -39,7 +39,7 @@ entity.perspective_lens:set_near(0.01)
 Get perspective far plane.
 
 ```lua
-far = entity.perspective_lens:get_far()
+local far = entity.perspective_lens:get_far()
 ```
 
 **Returns:**
@@ -65,7 +65,7 @@ entity.perspective_lens:set_far(1000.0)
 Get camera sensor size.
 
 ```lua
-width, height = entity.perspective_lens:get_sensor_size()
+local width, height = entity.perspective_lens:get_sensor_size()
 ```
 
 **Returns:**
@@ -92,7 +92,7 @@ entity.perspective_lens:set_sensor_size(23.6, 15.6)
 Get lens focal length.
 
 ```lua
-focal_length = entity.perspective_lens:get_focal_length()
+local focal_length = entity.perspective_lens:get_focal_length()
 ```
 
 **Returns:**
@@ -118,7 +118,7 @@ entity.perspective_lens:set_focal_length(23.0)
 Get lens aperture.
 
 ```lua
-aperture = entity.perspective_lens:get_aperture()
+local aperture = entity.perspective_lens:get_aperture()
 ```
 
 **Returns:**
@@ -144,7 +144,7 @@ entity.perspective_lens:set_aperture(16.0)
 Get camera shutter speed.
 
 ```lua
-shutter_speed = entity.perspective_lens:get_shutter_speed()
+local shutter_speed = entity.perspective_lens:get_shutter_speed()
 ```
 
 **Returns:**
@@ -170,7 +170,7 @@ entity.perspective_lens:set_shutter_speed(250.0)
 Get camera sensitivity (ISO).
 
 ```lua
-sensitivity = entity.perspective_lens:get_sensitivity()
+local sensitivity = entity.perspective_lens:get_sensitivity()
 ```
 
 **Returns:**

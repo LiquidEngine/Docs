@@ -13,7 +13,7 @@ Note that, world transform cannot be modified by entity because it is always aut
 Get local position of entity.
 
 ```lua
-x, y, z = entity.local_transform:get_position()
+local x, y, z = entity.local_transform:get_position()
 ```
 
 **Returns:**
@@ -41,7 +41,7 @@ entity.local_transform:set_position(10.0, 2.5, 4.5)
 Get local scale of entity.
 
 ```lua
-x, y, z = entity.local_transform:get_scale()
+local x, y, z = entity.local_transform:get_scale()
 ```
 
 **Returns:**
@@ -69,7 +69,7 @@ entity.local_transform:set_scale(2.0, 2.0, 2.0)
 Get local rotation of entity.
 
 ```lua
-x, y, z = entity.local_tarnsform:get_rotation()
+local x, y, z = entity.local_tarnsform:get_rotation()
 ```
 
 The function returns three values -- x, y, and z euler angles for local rotation measured in degrees.

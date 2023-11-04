@@ -4,30 +4,26 @@ sidebar_position: 1
 
 # Script lifecycle
 
-Every script **must have** the following functions defined: `start` and `update`.
+## Starting script
 
-## `start`
-
-`start` function is called when the script is started for the first this. This can occur when a new script is attached to an entity for the first time. This function is typically used to set up the necessary data for the script to run properly:
+The script is immediately evaluated when it is processed by the scripting system. This occurs when script is attached to the entity for the first time in runtime. In editor, the script is always reevaluated at the start of simulation. We recommend to initialize all the necessary data for the script by defining them in the global context.
 
 ```lua
-position = 0
-
-function start()
-  position = 0
-end
+local position = 0
 ```
+
+:::tip "Tip"
+
+We strongly recommend to define all variables and functions (except for special functions) that are you are not planning to export to with `local` to store them in local context, which can improve performance when accessing these variables.
+
+:::
 
 ## `update`
 
 `update` function is called on every update. This is the main method to update entities using script. This method accepts the time delta as a parameter:
 
 ```lua
-position = 0
-
-function start()
-  position = 0
-end
+local position = 0
 
 function update(dt)
   position = position + 5.0 * dt

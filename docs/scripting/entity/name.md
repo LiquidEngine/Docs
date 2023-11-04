@@ -13,7 +13,7 @@ Name API allows accessing and modifying name of a component.
 Get name of entity.
 
 ```lua
-name = entity.name:get()
+local name = entity.name:get()
 ```
 
 **Returns:**

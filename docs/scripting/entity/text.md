@@ -13,7 +13,7 @@ Text API allows accessing and modifying the text component.
 Get text from component.
 
 ```lua
-text = entity.text:get_text()
+local text = entity.text:get_text()
 ```
 
 **Returns:**
@@ -35,7 +35,7 @@ entity.text:set_text("Hello world")
 Get line height.
 
 ```lua
-line_height = entity.text:get_line_height()
+local line_height = entity.text:get_line_height()
 ```
 
 **Returns:**

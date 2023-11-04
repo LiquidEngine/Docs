@@ -13,7 +13,7 @@ Collidable API allows modifying the collidable shape and material of an entity.
 Perform sweep test with collidable against other collidables in a given direction that have querying enabled.
 
 ```lua
-collided, info = entity.collidable:sweep(0.0, 0.0, 1.0, 0.2)
+local collided, info = entity.collidable:sweep(0.0, 0.0, 1.0, 0.2)
 
 if collided then
   logger.log(info.normal.x, info.normal.y, info.normal.z)
@@ -63,7 +63,7 @@ entity.collidable:set_default_material()
 Get static friction of collidable.
 
 ```lua
-static_friction = entity.collidable:get_static_friction()
+local static_friction = entity.collidable:get_static_friction()
 ```
 
 **Returns:**
@@ -89,7 +89,7 @@ entity.collidable:set_static_friction(0.4)
 Get dynamic friction of collidable.
 
 ```lua
-dynamic_friction = entity.collidable:get_dynamic_friction()
+local dynamic_friction = entity.collidable:get_dynamic_friction()
 ```
 
 **Returns:**
@@ -115,7 +115,7 @@ entity.collidable:set_dynamic_friction(0.2)
 Get restitution of collidable material.
 
 ```lua
-restitution = entity.collidable:get_restitution()
+local restitution = entity.collidable:get_restitution()
 ```
 
 **Returns:**
