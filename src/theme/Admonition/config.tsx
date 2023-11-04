@@ -1,7 +1,4 @@
-import clsx from "clsx";
-import React from "react";
 import Translate from "@docusaurus/Translate";
-import styles from "./styles.module.css";
 
 function NoteIcon() {
   return (
@@ -53,11 +50,11 @@ function CautionIcon() {
     </svg>
   );
 }
-// eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-const AdmonitionConfigs = {
+
+export const config = {
   note: {
-    infimaClassName: "secondary",
-    iconComponent: NoteIcon,
+    IconComponent: NoteIcon,
+    className: "bg-white-200",
     label: (
       <Translate
         id="theme.admonition.note"
@@ -68,8 +65,8 @@ const AdmonitionConfigs = {
     ),
   },
   tip: {
-    infimaClassName: "success",
-    iconComponent: TipIcon,
+    IconComponent: TipIcon,
+    className: "bg-yellow-200 dark:text-black",
     label: (
       <Translate
         id="theme.admonition.tip"
@@ -79,21 +76,9 @@ const AdmonitionConfigs = {
       </Translate>
     ),
   },
-  danger: {
-    infimaClassName: "danger",
-    iconComponent: DangerIcon,
-    label: (
-      <Translate
-        id="theme.admonition.danger"
-        description="The default label used for the Danger admonition (:::danger)"
-      >
-        danger
-      </Translate>
-    ),
-  },
   info: {
-    infimaClassName: "info",
-    iconComponent: InfoIcon,
+    IconComponent: InfoIcon,
+    className: "bg-blue-200 dark:text-black",
     label: (
       <Translate
         id="theme.admonition.info"
@@ -104,8 +89,8 @@ const AdmonitionConfigs = {
     ),
   },
   caution: {
-    infimaClassName: "warning",
-    iconComponent: CautionIcon,
+    IconComponent: CautionIcon,
+    className: "bg-orange-200 dark:text-black",
     label: (
       <Translate
         id="theme.admonition.caution"
@@ -115,75 +100,16 @@ const AdmonitionConfigs = {
       </Translate>
     ),
   },
-};
-
-function getAdmonitionConfig(type) {
-  const config = AdmonitionConfigs[type];
-  if (config) {
-    return config;
-  }
-  console.warn(
-    `No admonition config found for admonition type "${type}". Using Info as fallback.`
-  );
-  return AdmonitionConfigs.info;
-}
-// Workaround because it's difficult in MDX v1 to provide a MDX title as props
-// See https://github.com/facebook/docusaurus/pull/7152#issuecomment-1145779682
-function extractMDXAdmonitionTitle(children) {
-  const items = React.Children.toArray(children);
-  const mdxAdmonitionTitle = items.find(
-    (item) =>
-      React.isValidElement(item) && item.props?.mdxType === "mdxAdmonitionTitle"
-  );
-  const rest = <>{items.filter((item) => item !== mdxAdmonitionTitle)}</>;
-  return {
-    mdxAdmonitionTitle,
-    rest,
-  };
-}
-function processAdmonitionProps(props) {
-  const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(
-    props.children
-  );
-  return {
-    ...props,
-    title: props.title ?? mdxAdmonitionTitle,
-    children: rest,
-  };
-}
-
-const admonitionClasses = {
-  note: "bg-white-200",
-  tip: "bg-yellow-200 dark:text-black",
-  info: "bg-blue-200 dark:text-black",
-  caution: "bg-orange-200 dark:text-black",
-  danger: "bg-red-200 dark:text-black",
-};
-
-export default function Admonition(props) {
-  const {
-    children,
-    type,
-    title,
-    icon: iconProp,
-  } = processAdmonitionProps(props);
-  const typeConfig = getAdmonitionConfig(type);
-  const titleLabel = title ?? typeConfig.label;
-  const { iconComponent: IconComponent } = typeConfig;
-  const icon = iconProp ?? <IconComponent />;
-  return (
-    <div
-      className={clsx(
-        admonitionClasses[props.type],
-        "alert",
-        styles.admonition
-      )}
-    >
-      <div className={styles.admonitionHeading}>
-        <span className={styles.admonitionIcon}>{icon}</span>
-        {titleLabel}
-      </div>
-      <div className={styles.admonitionContent}>{children}</div>
-    </div>
-  );
-}
+  danger: {
+    IconComponent: DangerIcon,
+    className: "bg-red-200 dark:text-black",
+    label: (
+      <Translate
+        id="theme.admonition.danger"
+        description="The default label used for the Danger admonition (:::danger)"
+      >
+        danger
+      </Translate>
+    ),
+  },
+} as const;
