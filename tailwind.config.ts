@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+export default {
   corePlugins: {
     preflight: false, // disable Tailwind's reset
   },
@@ -7,4 +8,4 @@ module.exports = {
   theme: {},
   plugins: [],
   darkMode: ["class", '[data-theme="dark"]'],
-};
+} satisfies Config;
