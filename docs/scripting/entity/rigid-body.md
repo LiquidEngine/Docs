@@ -116,7 +116,7 @@ entity.rigid_body:apply_force(100.0, 0.0, -20.0)
 
 ### `apply_impulse(x: number, y: number, z: number): void` {#apply_impulse}
 
-Apply impulse **once.**
+Apply impulse **once.** If you want to apply the impulse continuously, you need to apply it on every update.
 
 ```lua
 entity.rigid_body:apply_impulse(100.0, 0.0, -20.0)

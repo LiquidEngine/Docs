@@ -18,14 +18,29 @@ We strongly recommend to define all variables and functions (except for special 
 
 :::
 
-## `update`
+## Register updater
 
-`update` function is called on every update. This is the main method to update entities using script. This method accepts the time delta as a parameter:
+Every script register custom update logic that is called on every update. To register this updater, you need to use the `on_update` signal that is available from `game` object:
 
 ```lua
-local position = 0
+local position = 0.0
 
-function update(dt)
+game.on_update:connect(function()
   position = position + 5.0 * dt
+end)
+```
+
+You can register and unregister multiple updaters from the script:
+
+```lua
+local position = 0.0
+local disable_update = true
+
+local position_updater = game.on_update:connect(function()
+  position = position + 5.0 * dt
+end)
+
+if disable_update then
+  position_updater:disconnect()
 end
 ```
