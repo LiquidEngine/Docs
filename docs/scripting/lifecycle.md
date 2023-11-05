@@ -25,10 +25,12 @@ Every script register custom update logic that is called on every update. To reg
 ```lua
 local position = 0.0
 
-game.on_update:connect(function()
+game.on_update:connect(function(dt)
   position = position + 5.0 * dt
 end)
 ```
+
+In this signal, `dt` represents the delta time of each update.
 
 You can register and unregister multiple updaters from the script:
 
@@ -36,7 +38,7 @@ You can register and unregister multiple updaters from the script:
 local position = 0.0
 local disable_update = true
 
-local position_updater = game.on_update:connect(function()
+local position_updater = game.on_update:connect(function(dt)
   position = position + 5.0 * dt
 end)
 
