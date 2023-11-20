@@ -34,6 +34,7 @@ states:
     output:
       type: animation
       animation: d410828fb4454c1c949f5e3c965e4ae8
+      speed: 1.5
     on:
       - type: event
         event: slice-horizontal
@@ -42,6 +43,7 @@ states:
     output:
       type: animation
       animation: 1f1fc120cba24fb282cf353bb385277b
+      loopMode: linear
     on:
       - type: event
         event: chop
@@ -50,7 +52,7 @@ states:
 
 ## States
 
-Animators are state machines; so, we we need to define all available states in animator. All states are stored inside a `states` object. Each key in the objectrepresents the name of the state. Each state is an object that has two fields -- `output` and `on`.
+Animators are state machines; so, we we need to define all available states in animator. All states are stored inside a `states` object. Each key in the object represents the name of the state. Each state is an object that has two fields -- `output` and `on`.
 
 ### Output
 
@@ -60,7 +62,20 @@ Animators are state machines; so, we we need to define all available states in a
 output:
   type: animation # Required field
   animation: f6a58a00b3ed40c1bd55fcae4133adff # UUID of animation
+  loopMode: linear # Optional
+  speed: 1.5 # Optional
 ```
+
+- `type`: Type is a required field. Currently, only `animation` type is supported
+- `animation`: UUID of the animation
+- `loopMode` (default: `none`): Loop mode defines what happens when animation in the end reaches the end.
+  - `none`: Stops animation when it reaches the end
+  - `linear`: Starts animation from the beginning when it reaches the end
+- `speed` (default: `1.0`): Represents the animation speed
+  - `1.0`: runs animation at the speed that is defined in the animation
+  - `< 1.0`: runs animation slower than the speed that is defined in the animation
+  - `> 1.0`: runs animation faster than the speed that is defined in the animation
+  - **Note:** Negative values are not allowed
 
 :::info Finding UUIDs
 
