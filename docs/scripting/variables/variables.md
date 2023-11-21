@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # Variables
@@ -15,6 +15,7 @@ You can register the variables using the provided `input_vars.register` function
 This is the main method to register variables in scripts for injection.
 
 ```lua
+local entity_spawner = game:get('EntitySpawner')
 local rock_prefab = input_vars.register('rock', input_vars.types.AssetPrefab)
 
 entity_spawner.spawnPrefab(rock_prefab)

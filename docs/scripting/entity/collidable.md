@@ -13,6 +13,7 @@ Collidable API allows modifying the collidable shape and material of an entity.
 Perform sweep test with collidable against other collidables in a given direction that have querying enabled.
 
 ```lua
+local logger = game:get('Logger')
 local collided, info = entity.collidable:sweep(0.0, 0.0, 1.0, 0.2)
 
 if collided then

@@ -1,10 +1,14 @@
 ---
-sidebar_position: 10
+sidebar_position: 3
 ---
 
 # Logger
 
-Logger provides a way to log meaningful messages about the script. In editor, all logged messages are stored in the `Logs` tab:
+```lua
+local logger = game:get('Logger')
+```
+
+Logger service provides a way to log meaningful messages about the script. In editor, all logged messages are stored in the `Logs` tab:
 
 ![Logger](./img/logger.png)
 
@@ -15,6 +19,7 @@ Logger provides a way to log meaningful messages about the script. In editor, al
 Logs debug message
 
 ```lua
+local logger = game:get("Logger")
 logger.debug("This is a debug message")
 ```
 
@@ -27,6 +32,7 @@ logger.debug("This is a debug message")
 Logs info message
 
 ```lua
+local logger = game:get("Logger")
 logger.info("This is an info message")
 ```
 
@@ -39,6 +45,7 @@ logger.info("This is an info message")
 Logs warning message
 
 ```lua
+local logger = game:get("Logger")
 logger.warning("This is a warning message")
 ```
 
@@ -51,6 +58,7 @@ logger.warning("This is a warning message")
 Logs error message
 
 ```lua
+local logger = game:get("Logger")
 logger.debug("This is an error message")
 ```
 
@@ -63,6 +71,7 @@ logger.debug("This is an error message")
 Logs fatal message
 
 ```lua
+local logger = game:get("Logger")
 logger.debug("This is a fatal message")
 ```
 
