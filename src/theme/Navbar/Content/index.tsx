@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { useThemeConfig, ErrorCauseBoundary } from "@docusaurus/theme-common";
 import {
   splitNavbarItems,
@@ -48,7 +48,7 @@ function NavbarContentLayout({
   right: ReactNode;
 }) {
   return (
-    <div className="navbar__inner">
+    <div className="navbar__inner max-w-screen-2xl w-full mx-auto px-[60px]">
       <div className="navbar__items">{left}</div>
       <div className="navbar__items navbar__items--right space-x-5">
         {right}

@@ -4,7 +4,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
   title: "Quoll engine",
-  tagline: "Easy to use game engine",
+  tagline:
+    "Quoll is an open source game engine that is built with simplicity and ease of use in mind.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here

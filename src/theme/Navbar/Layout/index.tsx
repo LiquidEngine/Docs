@@ -1,4 +1,4 @@
-import React, { type ComponentProps } from "react";
+import { type ComponentProps } from "react";
 import clsx from "clsx";
 import { useThemeConfig } from "@docusaurus/theme-common";
 import {
@@ -36,7 +36,7 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
         description: "The ARIA label for the main navigation",
       })}
       className={clsx(
-        "navbar h-20 px-4 py-0 flex sticky top-0 z-50 bg-white dark:bg-black-400",
+        "navbar px-0 h-20 w-full py-0 flex z-50 border-0 shadow-none dark:bg-black-400",
         hideOnScroll && [
           styles.navbarHideable,
           !isNavbarVisible && styles.navbarHidden,
