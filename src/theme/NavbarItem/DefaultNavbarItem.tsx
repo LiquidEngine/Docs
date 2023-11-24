@@ -1,4 +1,3 @@
-import React from "react";
 import clsx from "clsx";
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import type {
@@ -11,7 +10,6 @@ function DefaultNavbarItemDesktop({
   isDropdownItem = false,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
-  console.log(props);
   const element = (
     <NavbarNavLink
       className={clsx(
