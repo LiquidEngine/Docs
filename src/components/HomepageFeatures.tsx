@@ -36,7 +36,7 @@ function Feature({ Svg, title, description }) {
 
 export default function HomepageFeatures() {
   return (
-    <section className="bg-[#f4f4f4] dark:bg-black-300 py-[60px]">
+    <section className="bg-[#f4f4f4] dark:bg-covert-300 py-[60px]">
       <div className="max-w-screen-2xl w-full mx-auto px-[60px]">
         <div className="flex flex-col gap-[40px] sm:flex-row sm:gap-0 justify-center items-center sm:items-stretch lg:gap-[150px]">
           {FeatureList.map((props, idx) => (

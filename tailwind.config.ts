@@ -9,7 +9,8 @@ export default {
     extend: {
       colors: {
         primary: "#ee5a24",
-        black: {
+        black: "#111111",
+        covert: {
           100: "#111111",
           300: "#202023",
           400: "#1b1b1d",

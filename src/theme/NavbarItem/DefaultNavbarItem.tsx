@@ -15,7 +15,7 @@ function DefaultNavbarItemDesktop({
   const element = (
     <NavbarNavLink
       className={clsx(
-        "text-black-100 dark:text-white hover:text-primary dark:hover:text-primary active:text-primary dark:active:text-primary hover:no-underline font-medium hidden lg:inline-block",
+        "text-covert-100 dark:text-white hover:text-primary dark:hover:text-primary active:text-primary dark:active:text-primary hover:no-underline font-medium hidden lg:inline-block",
         {
           dropdown__link: isDropdownItem,
         },

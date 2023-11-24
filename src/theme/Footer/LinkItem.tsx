@@ -13,7 +13,7 @@ export default function FooterLinkItem({ item }: Props): JSX.Element {
 
   return (
     <Link
-      className="mb-2 inline-block text-black-100 dark:text-white hover:no-underline hover:text-primary dark:hover:text-primary"
+      className="mb-2 inline-block text-covert-100 dark:text-white hover:no-underline hover:text-primary dark:hover:text-primary"
       {...(href
         ? {
             href: prependBaseUrlToHref ? normalizedHref : href,

@@ -13,7 +13,7 @@ export default function Admonition({ type, title, children }: AdmonitionProps) {
   const titleLabel = title ?? label;
 
   return (
-    <div className={clsx(className, "alert mb-4")}>
+    <div className={clsx(className, "alert mb-4 p-4")}>
       <div className={styles.admonitionHeading}>
         <span className={styles.admonitionIcon}>
           <IconComponent />
