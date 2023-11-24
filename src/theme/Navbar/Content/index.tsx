@@ -12,6 +12,7 @@ import NavbarLogo from "@theme/Navbar/Logo";
 import NavbarSearch from "@theme/Navbar/Search";
 
 import styles from "./styles.module.css";
+import clsx from "clsx";
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -20,7 +21,7 @@ function useNavbarItems() {
 
 function NavbarItems({ items }: { items: NavbarItemConfig[] }): JSX.Element {
   return (
-    <div className="navbar__items space-x-4">
+    <div className="navbar__items space-x-6">
       {items.map((item, i) => (
         <ErrorCauseBoundary
           key={i}
@@ -50,9 +51,7 @@ function NavbarContentLayout({
   return (
     <div className="navbar__inner max-w-screen-2xl w-full mx-auto px-[60px]">
       <div className="navbar__items">{left}</div>
-      <div className="navbar__items navbar__items--right space-x-5">
-        {right}
-      </div>
+      <div className="navbar__items navbar__items--right">{right}</div>
     </div>
   );
 }
@@ -78,7 +77,9 @@ export default function NavbarContent(): JSX.Element {
         // Ask the user to add the respective navbar items => more flexible
         <>
           <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle className={styles.colorModeToggle} />
+          <NavbarColorModeToggle
+            className={clsx(styles.colorModeToggle, "ml-6")}
+          />
           {!searchBarItem && (
             <NavbarSearch>
               <SearchBar />

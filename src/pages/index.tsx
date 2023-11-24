@@ -17,7 +17,7 @@ function HomepageHeader() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div>
             <Link
-              className="inline-block text-white rounded-lg px-5 py-3 text-xl font-bold bg-primary hover:no-underline hover:text-white hover:translate-y-2 transition-transform"
+              className="inline-block text-white rounded-lg px-5 py-3 text-xl font-bold bg-primary hover:no-underline hover:text-white hover:translate-y-1 transition-transform"
               to="/download"
             >
               Download
@@ -40,12 +40,8 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="3D game engine"
-    >
+    <Layout description="Open source game engine built with simplicity in mind">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

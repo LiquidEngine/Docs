@@ -86,7 +86,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "scriptingSidebar",
           position: "left",
-          label: "Scripting API",
+          label: "Lua scripting API",
         },
         {
           type: "docsVersionDropdown",
@@ -110,7 +110,7 @@ const config: Config = {
               to: "/docs/manual",
             },
             {
-              label: "Lua API",
+              label: "Lua scripting API",
               to: "/docs/scripting",
             },
           ],
@@ -125,7 +125,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Quoll Engine. Built by Gasim Gasimzada`,
+      copyright: `© ${new Date().getFullYear()} Quoll Engine`,
     },
     prism: {
       theme: prismThemes.github,

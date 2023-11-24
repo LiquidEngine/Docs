@@ -11,10 +11,11 @@ function DefaultNavbarItemDesktop({
   isDropdownItem = false,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
+  console.log(props);
   const element = (
     <NavbarNavLink
       className={clsx(
-        "text-black-100 dark:text-white hover:text-primary active:text-primary hover:no-underline font-medium hidden lg:inline-block",
+        "text-black-100 dark:text-white hover:text-primary dark:hover:text-primary active:text-primary dark:active:text-primary hover:no-underline font-medium hidden lg:inline-block",
         {
           dropdown__link: isDropdownItem,
         },
@@ -55,7 +56,7 @@ export default function DefaultNavbarItem({
       {...props}
       activeClassName={
         props.activeClassName ??
-        (mobile ? "menu__link--active" : "navbar__link--active")
+        (mobile ? "menu__link--active" : "text-primary dark:text-primary")
       }
     />
   );
