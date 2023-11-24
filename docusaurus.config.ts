@@ -74,10 +74,6 @@ const config: Config = {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "Quoll Engine",
-      logo: {
-        alt: "Quoll Engine",
-        src: "img/logo.svg",
-      },
       items: [
         {
           type: "docSidebar",
