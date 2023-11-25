@@ -14,7 +14,7 @@ local position = 0
 
 :::tip "Tip"
 
-We strongly recommend to define all variables and functions (except for special functions) that are you are not planning to export to with `local` to store them in local context, which can improve performance when accessing these variables.
+We strongly recommend to define all variables and functions that are you are not planning to export to with `local` to store them in local context, which can improve performance when accessing these variables.
 
 :::
 
