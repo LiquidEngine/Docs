@@ -5,7 +5,6 @@ import DocRootLayoutSidebar from "@theme/DocRoot/Layout/Sidebar";
 import DocRootLayoutMain from "@theme/DocRoot/Layout/Main";
 import type { Props } from "@theme/DocRoot/Layout";
 
-import clsx from "clsx";
 
 export default function DocRootLayout({ children }: Props): JSX.Element {
   const sidebar = useDocsSidebar();
@@ -13,7 +12,7 @@ export default function DocRootLayout({ children }: Props): JSX.Element {
   return (
     <div className="flex flex-1">
       <BackToTopButton />
-      <div className={clsx("max-w-screen-2xl w-full mx-auto px-[60px] flex")}>
+      <div className={"max-w-screen-2xl w-full mx-auto px-[60px] flex pt-4"}>
         {sidebar && (
           <DocRootLayoutSidebar
             sidebar={sidebar.items}
