@@ -7,7 +7,7 @@ export default function FooterLayout({
 }: Props): JSX.Element {
   return (
     <footer className="dark:bg-covert-400">
-      <div className="max-w-screen-2xl mx-auto px-[60px] py-10 flex flex-col lg:flex-row">
+      <div className="q-container py-10 flex flex-col lg:flex-row">
         {(logo || copyright) && (
           <div className="mr-[100px] mb-10 lg:mb-0">
             {logo && <div>{logo}</div>}

@@ -39,7 +39,7 @@ export default function MDXPage(props: Props): JSX.Element {
           keywords={keywords}
           image={image}
         />
-        <main className="max-w-screen-2xl w-full mx-auto px-[60px] flex pt-4">
+        <main className="q-container flex pt-4">
           <div className={clsx('row', styles.mdxPageWrapper)}>
             <div className={clsx('col', !hideTableOfContents && 'col--8')}>
               {unlisted && <Unlisted />}

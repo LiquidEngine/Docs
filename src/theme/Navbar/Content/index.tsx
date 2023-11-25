@@ -49,7 +49,7 @@ function NavbarContentLayout({
   right: ReactNode;
 }) {
   return (
-    <div className="navbar__inner max-w-screen-2xl w-full mx-auto px-[60px]">
+    <div className="navbar__inner q-container">
       <div className="navbar__items">{left}</div>
       <div className="navbar__items navbar__items--right">{right}</div>
     </div>

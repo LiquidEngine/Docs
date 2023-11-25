@@ -20,6 +20,12 @@
   }
 }
 
+@layer components {
+  .q-container {
+    @apply max-w-screen-2xl mx-auto px-[60px] w-full
+  }
+}
+
 
 /* You can override the default Infima variables here. */
 :root {

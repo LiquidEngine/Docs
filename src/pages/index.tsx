@@ -8,7 +8,7 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className="pt-5 lg:pt-3 pb-10">
-      <div className="flex items-center justify-between space-x-12 max-w-screen-2xl mx-auto px-[60px]">
+      <div className="flex items-center justify-between space-x-12 q-container">
         <div className="flex-1">
           <h1 className="font-black text-5xl">
             Seamlessly <span className="text-primary">build</span> worlds
