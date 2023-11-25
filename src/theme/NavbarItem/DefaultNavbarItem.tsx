@@ -13,7 +13,7 @@ function DefaultNavbarItemDesktop({
   const element = (
     <NavbarNavLink
       className={clsx(
-        "text-covert-100 dark:text-white hover:text-primary dark:hover:text-primary active:text-primary dark:active:text-primary hover:no-underline font-medium hidden lg:inline-block",
+        "text-covert-100 dark:text-white hover:text-primary dark:hover:text-primary active:text-primary group-[.current]:text-primary dark:group-[.current]:text-primary dark:active:text-primary hover:no-underline font-medium hidden lg:inline-block",
         {
           dropdown__link: isDropdownItem,
         },
@@ -54,7 +54,7 @@ export default function DefaultNavbarItem({
       {...props}
       activeClassName={
         props.activeClassName ??
-        (mobile ? "menu__link--active" : "text-primary dark:text-primary")
+        (mobile ? "menu__link--active" : "group current")
       }
     />
   );

@@ -31,6 +31,7 @@
     "@docusaurus/tsconfig": "^3.0.0",
     "@docusaurus/types": "^3.0.0",
     "docusaurus-mdx-checker": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "typescript": "^5.2.2"
   },
   "browserslist": {
