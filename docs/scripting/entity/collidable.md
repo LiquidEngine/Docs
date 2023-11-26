@@ -8,7 +8,7 @@ Collidable API allows modifying the collidable shape and material of an entity.
 
 ## Reference
 
-### `sweep(dx: number, dy: number, dz: number, distance: number): boolean, CollisionHit` {#sweep}
+### `sweep(dx: number, dy: number, dz: number, maxDistance: number): boolean, CollisionHit` {#sweep}
 
 Perform sweep test with collidable against other collidables in a given direction that have querying enabled.
 
@@ -24,9 +24,9 @@ end
 **Parameters:**
 
 - `dx`: Direction vector x axis
-- `dx`: Direction vector x axis
-- `dx`: Direction vector x axis
-- `distance`: Collision distance
+- `dy`: Direction vector y axis
+- `dz`: Direction vector z axis
+- `maxDistance`: Maximum distance to search along the sweep
 
 **Return:**
 
