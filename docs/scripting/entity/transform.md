@@ -1,5 +1,5 @@
 ---
-sidebar_position: 300
+sidebarPosition: 300
 ---
 
 # Transform
@@ -8,24 +8,26 @@ Transform API provides methods to access and modify **local transform** of entit
 
 Note that, world transform cannot be modified by entity because it is always autocalculated from local transform.
 
-### `get_position(): number, number, number` {#get_position}
+## Methods
+
+### `getPosition(): number, number, number` {#method-getPosition}
 
 Get local position of entity.
 
 ```lua
-local x, y, z = entity.local_transform:get_position()
+local x, y, z = entity.localTransform:getPosition()
 ```
 
 **Returns:**
 
 The function returns three values -- local x, y, and z coordinates of entity.
 
-### `set_position(x: number, y: number, z: number): void` {#set_position}
+### `setPosition(x: number, y: number, z: number): void` {#method-setPosition}
 
 Set local position of entity.
 
 ```lua
-entity.local_transform:set_position(10.0, 2.5, 4.5)
+entity.localTransform:setPosition(10.0, 2.5, 4.5)
 ```
 
 **Parameters:**
@@ -36,24 +38,24 @@ entity.local_transform:set_position(10.0, 2.5, 4.5)
 
 ---
 
-### `get_scale(): number, number, number` {#get_scale}
+### `getScale(): number, number, number` {#method-getScale}
 
 Get local scale of entity.
 
 ```lua
-local x, y, z = entity.local_transform:get_scale()
+local x, y, z = entity.localTransform:getScale()
 ```
 
 **Returns:**
 
 The function returns three values -- local x, y, and z scale of entity.
 
-### `set_scale(x: number, y: number, z: number): void` {#set_scale}
+### `setScale(x: number, y: number, z: number): void` {#method-setScale}
 
 Set local scale of entity.
 
 ```lua
-entity.local_transform:set_scale(2.0, 2.0, 2.0)
+entity.localTransform:setScale(2.0, 2.0, 2.0)
 ```
 
 **Parameters:**
@@ -64,22 +66,22 @@ entity.local_transform:set_scale(2.0, 2.0, 2.0)
 
 ---
 
-### `get_rotation(): number, number, number` {#get_rotation}
+### `getRotation(): number, number, number` {#method-getRotation}
 
 Get local rotation of entity.
 
 ```lua
-local x, y, z = entity.local_tarnsform:get_rotation()
+local x, y, z = entity.localTransform:getRotation()
 ```
 
 The function returns three values -- x, y, and z euler angles for local rotation measured in degrees.
 
-### `set_rotation(x: number, y: number, z: number): void` {#set_rotation}
+### `setRotation(x: number, y: number, z: number): void` {#method-setRotation}
 
 Set local rotation of entity in euler angles.
 
 ```lua
-entity.local_tarnsform:set_rotation(45.0, 10.0, 25.0)
+entity.localTransform:setRotation(45.0, 10.0, 25.0)
 ```
 
 **Parameters:**
@@ -90,10 +92,10 @@ entity.local_tarnsform:set_rotation(45.0, 10.0, 25.0)
 
 ---
 
-### `delete(): void` {#delete}
+### `delete(): void` {#method-delete}
 
 Delete local transform component.
 
 ```lua
-entity.local_tarnsform:delete()
+entity.localTransform:delete()
 ```

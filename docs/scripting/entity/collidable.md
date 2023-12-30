@@ -6,9 +6,39 @@ sidebar_position: 700
 
 Collidable API allows modifying the collidable shape and material of an entity.
 
-## Reference
+## Properties
 
-### `sweep(dx: number, dy: number, dz: number, maxDistance: number): boolean, CollisionHit` {#sweep}
+### `staticFriction: number` {#prop-staticFriction}
+
+Static friction of collidable represented as non-negative number.
+
+```lua
+local staticFriction = entity.collidable.staticFriction
+entity.collidable.staticFriction = 0.4
+```
+
+### `dynamicFriction: number` {#prop-dynamicFriction}
+
+Dynamic friction of collidable represented as non-negative number.
+
+```lua
+local dynamicFriction = entity.collidable.dynamicFriction
+entity.collidable.dynamicFriction = 0.2
+```
+
+### `restitution: number` {#prop-restitution}
+
+Restitution of collidable represented as non-negative number.
+
+```lua
+local restitution = entity.collidable.restitution
+entity.collidable.restitution = 1.2
+```
+
+
+## Methods
+
+### `sweep(dx: number, dy: number, dz: number, maxDistance: number): boolean, CollisionHit` {#method-sweep}
 
 Perform sweep test with collidable against other collidables in a given direction that have querying enabled.
 
@@ -45,7 +75,7 @@ If no collidable does not have collision, the returned value is `nil`.
 
 ---
 
-### `set_default_material(): void` {#set_default_material}
+### `setDefaultMaterial(): void` {#method-setDefaultMaterial}
 
 Set default collidable material. Default material has the following values:
 
@@ -54,95 +84,17 @@ Set default collidable material. Default material has the following values:
 - restitution = 1.0
 
 ```lua
-entity.collidable:set_default_material()
+entity.collidable:setDefaultMaterial()
 ```
 
 ---
 
-### `get_static_friction(): number` {#get_static_friction}
-
-Get static friction of collidable.
-
-```lua
-local static_friction = entity.collidable:get_static_friction()
-```
-
-**Returns:**
-
-Static friction of collidable. The returned value is a number.
-
-### `set_static_friction(static_friction: number): void` {#set_static_friction}
-
-Set static friction of collidable.
-
-```lua
-entity.collidable:set_static_friction(0.4)
-```
-
-**Parameters:**
-
-- `static_friction`: Static friction that you want to set. The parameter accepts non-negative number.
-
----
-
-### `get_dynamic_friction(): number` {#get_dynamic_friction}
-
-Get dynamic friction of collidable.
-
-```lua
-local dynamic_friction = entity.collidable:get_dynamic_friction()
-```
-
-**Returns:**
-
-Dynamic friction of collidable. The returned value is a number.
-
-### `set_dynamic_friction(dynamic_friction: number): void` {#set_dynamic_friction}
-
-Set dynamic friction of collidable.
-
-```lua
-entity.collidable:set_dynamic_friction(0.2)
-```
-
-**Parameters:**
-
-- `static_friction`: Static friction that you want to set. The parameter accepts non-negative number.
-
----
-
-### `get_restitution(): number` {#get_restitution}
-
-Get restitution of collidable material.
-
-```lua
-local restitution = entity.collidable:get_restitution()
-```
-
-**Returns:**
-
-Restitution of collidable material. The return value is a number.
-
-### `set_restitution(restitution: number): void` {#set_restitution}
-
-Set restitution of collidable material.
-
-```lua
-entity.collidable:set_restitution(1.2)
-```
-
-**Parameters:**
-
-- `restitution`: Restitution that you want to set. The value accepts a non-negative number.
-
----
-
-### `set_box_geometry(x: number, y: number, z: number): void` {#set_box_geometry}
+### `setBoxGeometry(x: number, y: number, z: number): void` {#method-setBoxGeometry}
 
 Set collidable geometry to box. Setting the geometry replaces previously set shape.
 
 ```lua
-entity.collidable:set_box_geometry(0.5, 1.0, 2.5)
+entity.collidable:setBoxGeometry(0.5, 1.0, 2.5)
 ```
 
 **Parameters:**
@@ -153,12 +105,12 @@ entity.collidable:set_box_geometry(0.5, 1.0, 2.5)
 
 ---
 
-### `set_sphere_geometry(radius: number): void` {#set_sphere_geometry}
+### `setSphereGeometry(radius: number): void` {#method-setSphereGeometry}
 
 Set collidable geometry to sphere. Setting the geometry replaces previously set shape.
 
 ```lua
-entity.collidable:set_sphere_geometry(radius)
+entity.collidable:setSphereGeometry(radius)
 ```
 
 **Parameters:**
@@ -167,32 +119,32 @@ entity.collidable:set_sphere_geometry(radius)
 
 ---
 
-### `set_capsule_geometry(radius: number, half_height: number): void` {#set_capsule_geometry}
+### `setCapsuleGeometry(radius: number, halfHeight: number): void` {#method-setCapsuleGeometry}
 
 Set collidable geometry to capsule. Setting the geometry replaces previously set shape.
 
 ```lua
-entity.collidable:set_capsule_geometry(2.5, 10.0)
+entity.collidable:setCapsuleGeometry(2.5, 10.0)
 ```
 
 **Parameters:**
 
 - `radius`: Capsule radius. Value accepts positive numbers.
-- `half_height`: Capsule half height. Value accepts positive numbers.
+- `halfHeight`: Capsule half height. Value accepts positive numbers.
 
 ---
 
-### `set_plane_geometry(): void`
+### `setPlaneGeometry(): void` {#method-setPlaneGeometry}
 
 Set collidable geometry to plane. Setting the geometry replaces previously set shape.
 
 ```lua
-entity.collidable:set_plane_geometry()
+entity.collidable:setPlaneGeometry()
 ```
 
 ---
 
-### `delete(): void`
+### `delete(): void` {#method-delete}
 
 Delete collidable component.
 

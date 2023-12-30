@@ -5,35 +5,35 @@ sidebar_position: 2
 # Entity spawner
 
 ```lua
-local entity_spawner = game:get('EntitySpawner')
+local entitySpawner = game:get('EntitySpawner')
 ```
 
 Entity spawner service provides methods to spawn empty entities or entities from assets (e.g prefabs, sprites)
 
 ## Reference
 
-### `spawn_empty(): Entity` {#spawn_empty}
+### `spawnEntity(): Entity` {#spawnEntity}
 
 Spawns empty entity. The spawned entity is automatically assigned a name and local position.
 
 ```lua
-local entity_spawner = game:get('EntitySpawner')
-local my_entity = entity_spawner:spawn_empty()
+local entitySpawner = game:get('EntitySpawner')
+local myEntity = entitySpawner:spawnEntity()
 ```
 
 **Returns:**
 
 Entity object representing the newly spawned prefab.
 
-### `spawn_prefab(prefab: PrefabAsset): Entity` {#spawn_prefab}
+### `spawnPrefab(prefab: PrefabAsset): Entity` {#spawnPrefab}
 
 Spawns prefab to the scene.
 
 ```lua
-local prefab = input_vars.register('prefab', input_vars.types.AssetPrefab)
+local prefab = inputVars.register('prefab', inputVars.types.AssetPrefab)
 
-local entity_spawner = game:get('EntitySpawner')
-local my_entity = entity_spawner:spawn_prefab(prefab)
+local entitySpawner = game:get('EntitySpawner')
+local myEntity = entitySpawner:spawnPrefab(prefab)
 ```
 
 **Parameters:**
@@ -44,15 +44,15 @@ local my_entity = entity_spawner:spawn_prefab(prefab)
 
 Entity object representing the **root** entity of newly spawned prefab.
 
-### `spawn_sprite(prefab: TextureAsset): Entity` {#spawn_sprite}
+### `spawnSprite(prefab: TextureAsset): Entity` {#spawnSprite}
 
 Spawns prefab to the scene.
 
 ```lua
-local texture = input_vars.register('texture', input_vars.types.AssetTexture)
+local texture = inputVars.register('texture', inputVars.types.AssetTexture)
 
-local entity_spawner = game:get('EntitySpawner')
-local my_entity = entity_spawner:spawn_prefab(texture)
+local entitySpawner = game:get('EntitySpawner')
+local myEntity = entitySpawner:spawnPrefab(texture)
 ```
 
 **Parameters:**

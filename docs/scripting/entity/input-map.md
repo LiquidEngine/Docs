@@ -1,19 +1,19 @@
 ---
-sidebar_position: 1000
+sidebarPosition: 1000
 ---
 
 # Input map
 
 Input map API allows accessing input commands and their values as well as switching input schemes.
 
-## Reference
+## Methods
 
-### `get_command(name: string): number` {#get_command}
+### `getCommand(name: string): number` {#method-getCommand}
 
 Gets command in the input map. If command is not found, `null` will be returned.
 
 ```lua
-local command = entity.input:get_command("Move")
+local command = entity.input:getCommand("Move")
 ```
 
 We recommend to call this function when script starts instead of during update.
@@ -28,14 +28,14 @@ Internal representation of command.
 
 ---
 
-### `get_value_boolean(command: number): boolean` {#get_value_boolean}
+### `getValueBoolean(command: number): boolean` {#method-getValueBoolean}
 
 Retrieves command value as boolean:
 
 ```lua
-local command = entity.input:get_command("Jump")
+local command = entity.input:getCommand("Jump")
 
-local value = entity.input:get_value_boolean(command)
+local value = entity.input:getValueBoolean(command)
 ```
 
 **Parameters:**
@@ -50,18 +50,18 @@ Boolean value of command.
 - For axis 2d commands, the value is `true` if **any** axis is non-zero
 - For axis 2d commands, the value is `false` if **both** axis values are zero
 
-### `is_pressed(command: number): boolean` {#is_pressed}
+### `isPressed(command: number): boolean` {#method-isPressed}
 
-Alias of [`get_value_boolean`](#get_value_boolean)
+Alias of [`getValueBoolean`](#getValueBoolean)
 
-### `get_value_axis_2d(command: number): number, number` {#get_value_axis_2d}
+### `getValueAxis2d(command: number): number, number` {#method-getValueAxis2d}
 
 Retrieves command value as Axis 2D:
 
 ```lua
-local command = entity.input:get_command("Move")
+local command = entity.input:getCommand("Move")
 
-local x, y = entity.input:get_value_axis_2d(command)
+local x, y = entity.input:getValueAxis_2d(command)
 ```
 
 **Parameters:**
@@ -78,12 +78,12 @@ Axis 2D value of command.
 
 ---
 
-### `set_scheme(name: string): void` {#set_scheme}
+### `setScheme(name: string): void` {#method-setScheme}
 
 Switches input map to provided scheme. If scheme is not found, the function does nothing.
 
 ```lua
-entity.input:set_scheme("Combat")
+entity.input:setScheme("Combat")
 ```
 
 **Parameters:**

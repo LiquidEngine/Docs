@@ -6,9 +6,19 @@ sidebar_position: 900
 
 Rigid body API allows interacting with audio source component.
 
-## Reference
+## Properties
 
-### `play(): void` {#play}
+### `isPlaying: boolean` *(readonly)* {#prop-isPlaying}
+
+Check if audio is current playing.
+
+```lua
+local isPlaying = entity.audio.isPlaying
+```
+
+## Methods
+
+### `play(): void` {#method-play}
 
 Play audio that is defined in audio source component.
 
@@ -16,19 +26,7 @@ Play audio that is defined in audio source component.
 entity.audio:play()
 ```
 
-### `is_playing(): boolean` {#is_playing}
-
-Check if audio is current playing.
-
-```lua
-local is_playing = entity.audio:is_playing()
-```
-
-**Returns:**
-
-If audio is playing, return `true`. If audio is not playing, return `false`.
-
-### `delete(): void` {#delete}
+### `delete(): void` {#method-delete}
 
 Delete audio source component.
 

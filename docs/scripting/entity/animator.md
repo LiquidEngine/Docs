@@ -6,9 +6,9 @@ sidebar_position: 600
 
 Animator API allows changing the animator component of an entity.
 
-## Reference
+## Methods
 
-### `trigger(event: string): void` {#trigger}
+### `trigger(event: string): void` {#method-trigger}
 
 Transition to new animation state based on event define in animator asset.
 
@@ -25,10 +25,10 @@ entity.animator:trigger("Move")
 
 ---
 
-### `delete(): void` {#delete}
+### `delete(): void` {#method-delete}
 
 Delete animator component.
 
 ```lua
-entity.local_tarnsform:delete()
+entity.animator:delete()
 ```

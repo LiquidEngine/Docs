@@ -12,13 +12,13 @@ Physics service provides signals and utilities related to physics world.
 
 ## Reference
 
-### `on_collision_start:connect(handler: (event: CollisionEvent): void): void` {#on_collision_start}
+### `onCollisionStart:connect(handler: (event: CollisionEvent): void): void` {#onCollisionStart}
 
 Triggered when two entities start colliding.
 
 ```lua
 local physics = game:get('Physics')
-physics.on_collision_start:connect(function(e)
+physics.onCollisionStart:connect(function(e)
   local a = e.a
   local b = e.b
 end)
@@ -31,13 +31,13 @@ end)
   - `event.b`: Second collided entity. The value is an [entity](../entity/entity.md).
 
 
-### `on_collision_end:connect(handler: (event: CollisionEvent): void): void` {#on_collision_end}
+### `onCollisionEnd:connect(handler: (event: CollisionEvent): void): void` {#onCollisionEnd}
 
 Triggered when two entities end colliding.
 
 ```lua
 local physics = game:get('Physics')
-physics.on_collision_end:connect(function(e)
+physics.onCollisionEnd:connect(function(e)
   local a = e.a
   local b = e.b
 end)

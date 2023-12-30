@@ -1,14 +1,35 @@
 ---
-sidebar_position: 800
+sidebarPosition: 800
 ---
 
 # Rigid body
 
 Rigid body API allows modifying dynamic rigid body of entity.
 
-## Reference
+## Properties
 
-### `set_default_params(): void` {#set_default_params}
+### `mass: number` {#prop-mass}
+
+Mass of rigid body in kilograms.
+
+```lua
+local mass = entity.rigidBody.mass
+entity.rigidBody.mass = 5.0
+```
+
+### `isGravityApplied: number` {#prop-isGravityApplied}
+
+Check or set if gravity is applied to rigid body. Note that, once gravity is applied, all the
+forces of the rigid body will stay even if gravity is disabled in the future.
+
+```lua
+local isGravityApplied = entity.rigidBody.isGravityApplied
+entity.rigidBody.isGravityApplied = false
+```
+
+## Methods
+
+### `setDefaultParams(): void` {#method-setDefaultParams}
 
 Set default rigid body parameters. Default parameters are:
 
@@ -17,55 +38,29 @@ Set default rigid body parameters. Default parameters are:
 - Gravity enabled
 
 ```lua
-entity.rigid_body:set_default_params()
+entity.rigidBody:setDefaultParams()
 ```
 
 ---
 
-### `get_mass(): number` {#get_mass}
-
-Get mass of rigid body.
-
-```lua
-local mass = entity.rigid_body.get_mass()
-```
-
-**Returns:**
-
-Mass of rigid body. The value is a number.
-
-### `set_mass(mass: number): void` {#set_mass}
-
-Set mass of rigid body.
-
-```lua
-entity.rigid_body.set_mass(5.0)
-```
-
-**Parameters:**
-
-- `mass`: Mass of rigid body. The value accepts non-negative numbers in kilograms.
-
----
-
-### `get_inertia(): number, number, number` {#get_inertia}
+### `getInertia(): number, number, number` {#method-getInertia}
 
 Get moment of inertia of rigid body.
 
 ```lua
-local x, y, z = entity.rigid_body.get_inertia()
+local x, y, z = entity.rigidBody.getInertia()
 ```
 
 **Returns:**
 
 Moment of inertia of rigid body. The function returns three values -- inertia in x, y, and z directions represented in kg x m2.
 
-### `set_inertia(x: number, y: number, z: number): void` {#set_inertia}
+### `setInertia(x: number, y: number, z: number): void` {#method-setInertia}
 
 Set moment of inertia inertia of rigid body.
 
 ```lua
-entity.rigid_body:set_inertia(0.2, 0.5, 0.2)
+entity.rigidBody:setInertia(0.2, 0.5, 0.2)
 ```
 
 **Parameters:**
@@ -76,36 +71,14 @@ entity.rigid_body:set_inertia(0.2, 0.5, 0.2)
 
 ---
 
-### `is_gravity_applied(): boolean` {#is_gravity_applied}
-
-```lua
-local is_gravity_applied = entity.rigid_body:is_gravity_applied()
-```
-
-**Returns:**
-
-Returns `true` is gravity is applied to entity. Returns `false` is gravity is not applied to entity.
-
-### `apply_gravity(apply: boolean): void` {#apply_gravity}
-
-Apply gravity to the rigid body. Note that, once gravity is applied, all the forces of the rigid body will stay even if gravity is disabled in the future.
-
-```lua
-entity.rigid_body:apply_gravity(false)
-```
-
-**Parameters:**
-
-- `apply`: Boolean value that determines if gravity should be applied. If value is `true`, gravity is applied. If value is `false`, gravity will not be applied.
-
 ---
 
-### `apply_force(x: number, y: number, z: number): void` {#apply_force}
+### `applyForce(x: number, y: number, z: number): void` {#method-applyForce}
 
 Apply force **once.** If you want to apply the force continuously, you need to apply it on every update.
 
 ```lua
-entity.rigid_body:apply_force(100.0, 0.0, -20.0)
+entity.rigidBody:applyForce(100.0, 0.0, -20.0)
 ```
 
 **Parameters:**
@@ -114,12 +87,12 @@ entity.rigid_body:apply_force(100.0, 0.0, -20.0)
 - `y`: Force in y direction. The value is measured in Newtons.
 - `z`: Force in z direction. The value is measured in Newtons.
 
-### `apply_impulse(x: number, y: number, z: number): void` {#apply_impulse}
+### `applyImpulse(x: number, y: number, z: number): void` {#method-applyImpulse}
 
 Apply impulse **once.** If you want to apply the impulse continuously, you need to apply it on every update.
 
 ```lua
-entity.rigid_body:apply_impulse(100.0, 0.0, -20.0)
+entity.rigidBody:applyImpulse(100.0, 0.0, -20.0)
 ```
 
 **Parameters:**
@@ -128,12 +101,12 @@ entity.rigid_body:apply_impulse(100.0, 0.0, -20.0)
 - `y`: Impulse in y direction. The value is measured in Newtons x s .
 - `z`: Impulse in z direction. The value is measured in Newtons x s.
 
-### `apply_torque(x: number, y: number, z: number): void` {#apply_torque}
+### `applyTorque(x: number, y: number, z: number): void` {#method-applyTorque}
 
 Apply torque **once.** If you want to apply the torque continuously, you need to apply it on every update.
 
 ```lua
-entity.rigid_body:apply_torque(100.0, 0.0, -20.0)
+entity.rigidBody:applyTorque(100.0, 0.0, -20.0)
 ```
 
 **Parameters:**
@@ -144,20 +117,20 @@ entity.rigid_body:apply_torque(100.0, 0.0, -20.0)
 
 ---
 
-### `clear(): void` {#clear}
+### `clear(): void` {#method-clear}
 
 Clear all currently applied forces. This is particularly useful when disabling gravity for the rigid body.
 
 ```lua
-entity.rigid_body:clear()
+entity.rigidBody:clear()
 ```
 
 ---
 
-### `delete(): void` {#delete}
+### `delete(): void` {#method-delete}
 
 Delete rigid body component.
 
 ```lua
-entity.rigid_body:delete()
+entity.rigidBody:delete()
 ```

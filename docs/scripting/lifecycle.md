@@ -20,12 +20,12 @@ We strongly recommend to define all variables and functions that are you are not
 
 ## Register updater
 
-Every script register custom update logic that is called on every update. To register this updater, you need to use the `on_update` signal that is available from `game` object:
+Every script register custom update logic that is called on every update. To register this updater, you need to use the `onUpdate` signal that is available from `game` object:
 
 ```lua
 local position = 0.0
 
-game.on_update:connect(function(dt)
+game.onUpdate:connect(function(dt)
   position = position + 5.0 * dt
 end)
 ```
@@ -36,13 +36,13 @@ You can register and unregister multiple updaters from the script:
 
 ```lua
 local position = 0.0
-local disable_update = true
+local disableUpdate = true
 
-local position_updater = game.on_update:connect(function(dt)
+local positionUpdater = game.onUpdate:connect(function(dt)
   position = position + 5.0 * dt
 end)
 
-if disable_update then
-  position_updater:disconnect()
+if disableUpdate then
+  positionUpdater:disconnect()
 end
 ```

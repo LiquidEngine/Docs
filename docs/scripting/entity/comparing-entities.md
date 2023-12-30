@@ -7,10 +7,10 @@ sidebar_position: 120
 You can compare two entities by using Lua equality comparison operators:
 
 ```lua
-local entity_query = game:get('EntityQuery')
-local entity1 = entity_query:get_first_entity_by_name('EntityA')
-local entity2 = entity_query:get_first_entity_by_name('EntityA')
-local entity3 = entity_query:get_first_entity_by_name('EntityB')
+local entityQuery = game:get('EntityQuery')
+local entity1 = entityQuery:getFirstEntityByName('EntityA')
+local entity2 = entityQuery:getFirstEntityByName('EntityA')
+local entity3 = entityQuery:getFirstEntityByName('EntityB')
 
 -- true
 local check1 = entity1 == entity2

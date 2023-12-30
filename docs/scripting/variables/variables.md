@@ -8,17 +8,17 @@ A lot of the times, we need a way to inject variables into scripts to access dat
 
 ## Registering variables
 
-You can register the variables using the provided `input_vars.register` function.
+You can register the variables using the provided `inputVars.register` function.
 
-### `input_vars.register(name: string, type: InputVarType): T` {#input_vars_register}
+### `inputVars.register(name: string, type: InputVarType): T` {#method-inputVars-register}
 
 This is the main method to register variables in scripts for injection.
 
 ```lua
-local entity_spawner = game:get('EntitySpawner')
-local rock_prefab = input_vars.register('rock', input_vars.types.AssetPrefab)
+local entitySpawner = game:get('EntitySpawner')
+local rockPrefab = inputVars.register('rock', inputVars.types.AssetPrefab)
 
-entity_spawner.spawnPrefab(rock_prefab)
+entitySpawner.spawnPrefab(rockPrefab)
 ```
 
 **Parameters:**
@@ -38,10 +38,10 @@ Make sure to register the variables only as a global variables. Registering vari
 
 ## Variable types
 
-### `input_vars.types.String` {#string}
+### `inputVars.types.String` {#var-type-string}
 
 ```lua
-local value = input_vars.register('test', input_vars.types.String)
+local value = inputVars.register('test', inputVars.types.String)
 ```
 
 **Returns:**
@@ -52,10 +52,10 @@ String value.
 
 ![String variable](./img/var-string.png)
 
-### `input_vars.types.AssetPrefab` {#asset-prefab}
+### `inputVars.types.AssetPrefab` {#var-type-asset-prefab}
 
 ```lua
-local value = input_vars.register('test', input_vars.types.AssetPrefab)
+local value = inputVars.register('test', inputVars.types.AssetPrefab)
 ```
 
 **Returns:**
@@ -66,10 +66,10 @@ Numeric internal ID representing prefab.
 
 ![Prefab variable](./img/var-prefab.png)
 
-### `input_vars.types.AssetPrefab` {#asset-texture}
+### `inputVars.types.AssetPrefab` {#var-type-asset-texture}
 
 ```lua
-local value = input_vars.register('test', input_vars.types.AssetTexture)
+local value = inputVars.register('test', inputVars.types.AssetTexture)
 ```
 
 **Returns:**
