@@ -14,13 +14,13 @@ export default function DocRootLayoutMain({
     <main
       className={clsx(
         styles.docMainContainer,
-        "px-10",
-        (hiddenSidebarContainer || !sidebar) && styles.docMainContainerEnhanced
+        "ds-mobile-cutoff:px-10",
+        (hiddenSidebarContainer || !sidebar) && styles.docMainContainerEnhanced,
       )}
     >
       <div
         className={clsx(
-          "container padding-top--md padding-bottom--lg",
+          "w-full padding-top--md padding-bottom--lg",
           styles.docItemWrapper,
           hiddenSidebarContainer && styles.docItemWrapperEnhanced
         )}

@@ -17,6 +17,7 @@ export default {
         },
       },
       screens: {
+        "ds-mobile-cutoff": "996px",
         "2xl": "1440px",
         "3xl": "1560px",
       },
