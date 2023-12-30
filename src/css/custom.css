@@ -22,7 +22,7 @@
 
 @layer components {
   .q-container {
-    @apply max-w-screen-2xl mx-auto px-[60px] w-full
+    @apply max-w-screen-2xl mx-auto px-[40px] sm:px-[60px] w-full
   }
 }
 
