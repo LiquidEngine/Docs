@@ -4,11 +4,35 @@ sidebarPosition: 800
 
 # Rigid body
 
-Rigid body API allows modifying dynamic rigid body of entity.
+Rigid body API allows modifying rigid body of entity. To learn more about rigid bodies and their types, check out [rigid body manual](../../manual/working-with-entities/rigid-body.md).
+
+## Enums
+
+### `RigidBodyType` {#enum-RigidBodyType}
+
+Represents rigid body type:
+
+- `RigidBodyType.Dynamic`: Dynamic rigid body type
+- `RigidBodyType.Kinematic`: Kinematic rigid body type
 
 ## Properties
 
+### `type: RigidBodyType` *(readonly)* {#prop-type}
+
+Rigid body type provided as `RigidBodyType`:
+
+```lua
+local type = entity.rigidBody.type
+if type == RigidBodyType.Dynamic then
+  logger.debug('Type is dynamic')
+elseif type == RigidBodyType.Kinematic then
+  logger.debug('Type is kinematic')
+end
+```
+
 ### `mass: number` {#prop-mass}
+
+*Only applicable for **dynamic** rigid bodies.*
 
 Mass of rigid body in kilograms.
 
@@ -18,6 +42,8 @@ entity.rigidBody.mass = 5.0
 ```
 
 ### `isGravityApplied: number` {#prop-isGravityApplied}
+
+*Only applicable for **dynamic** rigid bodies.*
 
 Check or set if gravity is applied to rigid body. Note that, once gravity is applied, all the
 forces of the rigid body will stay even if gravity is disabled in the future.
@@ -30,6 +56,8 @@ entity.rigidBody.isGravityApplied = false
 ## Methods
 
 ### `setDefaultParams(): void` {#method-setDefaultParams}
+
+*Only applicable for **dynamic** rigid bodies.*
 
 Set default rigid body parameters. Default parameters are:
 
@@ -45,6 +73,8 @@ entity.rigidBody:setDefaultParams()
 
 ### `getInertia(): number, number, number` {#method-getInertia}
 
+*Only applicable for **dynamic** rigid bodies.*
+
 Get moment of inertia of rigid body.
 
 ```lua
@@ -56,6 +86,8 @@ local x, y, z = entity.rigidBody.getInertia()
 Moment of inertia of rigid body. The function returns three values -- inertia in x, y, and z directions represented in kg x m2.
 
 ### `setInertia(x: number, y: number, z: number): void` {#method-setInertia}
+
+*Only applicable for **dynamic** rigid bodies.*
 
 Set moment of inertia inertia of rigid body.
 
@@ -75,6 +107,8 @@ entity.rigidBody:setInertia(0.2, 0.5, 0.2)
 
 ### `applyForce(x: number, y: number, z: number): void` {#method-applyForce}
 
+*Only applicable for **dynamic** rigid bodies.*
+
 Apply force **once.** If you want to apply the force continuously, you need to apply it on every update.
 
 ```lua
@@ -89,6 +123,8 @@ entity.rigidBody:applyForce(100.0, 0.0, -20.0)
 
 ### `applyImpulse(x: number, y: number, z: number): void` {#method-applyImpulse}
 
+*Only applicable for **dynamic** rigid bodies.*
+
 Apply impulse **once.** If you want to apply the impulse continuously, you need to apply it on every update.
 
 ```lua
@@ -102,6 +138,8 @@ entity.rigidBody:applyImpulse(100.0, 0.0, -20.0)
 - `z`: Impulse in z direction. The value is measured in Newtons x s.
 
 ### `applyTorque(x: number, y: number, z: number): void` {#method-applyTorque}
+
+*Only applicable for **dynamic** rigid bodies.*
 
 Apply torque **once.** If you want to apply the torque continuously, you need to apply it on every update.
 
@@ -118,6 +156,8 @@ entity.rigidBody:applyTorque(100.0, 0.0, -20.0)
 ---
 
 ### `clear(): void` {#method-clear}
+
+*Only applicable for **dynamic** rigid bodies.*
 
 Clear all currently applied forces. This is particularly useful when disabling gravity for the rigid body.
 
