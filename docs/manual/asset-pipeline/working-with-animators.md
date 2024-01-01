@@ -52,7 +52,7 @@ states:
 
 ## States
 
-Animators are state machines; so, we we need to define all available states in animator. All states are stored inside a `states` object. Each key in the object represents the name of the state. Each state is an object that has two fields -- `output` and `on`.
+Animators are state machines; so, we we need to define all available states in animator. All states are stored inside a `states` object. Each key in the object represents the **name** of the state. Each state is an object that has two fields -- `output` and `on`.
 
 ### Output
 
