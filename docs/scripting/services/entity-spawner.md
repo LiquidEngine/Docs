@@ -10,9 +10,9 @@ local entitySpawner = game:get('EntitySpawner')
 
 Entity spawner service provides methods to spawn empty entities or entities from assets (e.g prefabs, sprites)
 
-## Reference
+## Methods
 
-### `spawnEntity(): Entity` {#spawnEntity}
+### `spawnEntity(): Entity` {#method-spawnEntity}
 
 Spawns empty entity. The spawned entity is automatically assigned a name and local position.
 
@@ -25,7 +25,7 @@ local myEntity = entitySpawner:spawnEntity()
 
 Entity object representing the newly spawned prefab.
 
-### `spawnPrefab(prefab: PrefabAsset): Entity` {#spawnPrefab}
+### `spawnPrefab(prefab: PrefabAsset): Entity` {#method-spawnPrefab}
 
 Spawns prefab to the scene.
 
@@ -44,7 +44,7 @@ local myEntity = entitySpawner:spawnPrefab(prefab)
 
 Entity object representing the **root** entity of newly spawned prefab.
 
-### `spawnSprite(prefab: TextureAsset): Entity` {#spawnSprite}
+### `spawnSprite(prefab: TextureAsset): Entity` {#method-spawnSprite}
 
 Spawns prefab to the scene.
 

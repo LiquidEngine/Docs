@@ -10,9 +10,9 @@ local physics = game:get('Physics')
 
 Physics service provides signals and utilities related to physics world.
 
-## Reference
+## Signals
 
-### `onCollisionStart:connect(handler: (event: CollisionEvent): void): void` {#onCollisionStart}
+### `onCollisionStart:connect(handler: (event: CollisionEvent): void): void` {#signal-onCollisionStart}
 
 Triggered when two entities start colliding.
 
@@ -31,7 +31,7 @@ end)
   - `event.b`: Second collided entity. The value is an [entity](../entity/entity.md).
 
 
-### `onCollisionEnd:connect(handler: (event: CollisionEvent): void): void` {#onCollisionEnd}
+### `onCollisionEnd:connect(handler: (event: CollisionEvent): void): void` {#signal-onCollisionEnd}
 
 Triggered when two entities end colliding.
 

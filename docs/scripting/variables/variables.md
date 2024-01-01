@@ -66,7 +66,7 @@ Numeric internal ID representing prefab.
 
 ![Prefab variable](./img/var-prefab.png)
 
-### `inputVars.types.AssetPrefab` {#var-type-asset-texture}
+### `inputVars.types.AssetTexture` {#var-type-asset-texture}
 
 ```lua
 local value = inputVars.register('test', inputVars.types.AssetTexture)

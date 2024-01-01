@@ -12,9 +12,9 @@ Logger service provides a way to log meaningful messages about the script. In ed
 
 ![Logger](./img/logger.png)
 
-## Reference
+## Methods
 
-### `debug(message: string): void` {#debug}
+### `debug(message: string): void` {#method-debug}
 
 Logs debug message
 
@@ -27,7 +27,7 @@ logger.debug("This is a debug message")
 
 - `message`: Log message as string.
 
-### `info(message: string): void` {#info}
+### `info(message: string): void` {#method-info}
 
 Logs info message
 
@@ -40,7 +40,7 @@ logger.info("This is an info message")
 
 - `message`: Log message as string.
 
-### `warning(message: string): void` {#warning}
+### `warning(message: string): void` {#method-warning}
 
 Logs warning message
 
@@ -53,7 +53,7 @@ logger.warning("This is a warning message")
 
 - `message`: Log message as string.
 
-### `error(message: string): void` {#error}
+### `error(message: string): void` {#method-error}
 
 Logs error message
 
@@ -66,7 +66,7 @@ logger.debug("This is an error message")
 
 - `message`: Log message as string.
 
-### `fatal(message: string): void` {#fatal}
+### `fatal(message: string): void` {#method-fatal}
 
 Logs fatal message
 

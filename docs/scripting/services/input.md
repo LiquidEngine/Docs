@@ -10,9 +10,9 @@ local input = game:get('Input')
 
 Input service provides signals to listen to various input events.
 
-## Reference
+## Signals
 
-### `onKeyPress:connect(handler: (event: KeyboardEvent): void): void` {#onKeyPress}
+### `onKeyPress:connect(handler: (event: KeyboardEvent): void): void` {#signal-onKeyPress}
 
 Triggered when keyboard key is pressed.
 
@@ -30,7 +30,7 @@ end)
   - `event.key`: Value of the pressed key. The value is a numeric and is based on [GLFW key values](https://www.glfw.org/docs/latest/group__keys.html).
   - `event.mods`: Value of the modifier key (e.g Shift) pressed with the key. The value is a numeric and is based on [GLFW modifier flags](https://www.glfw.org/docs/latest/group__mods.html).
 
-### `onKeyRelease:connect(handler: (event: KeyboardEvent): void): void` {#onKeyRelease}
+### `onKeyRelease:connect(handler: (event: KeyboardEvent): void): void` {#signal-onKeyRelease}
 
 Triggered when keyboard key is released.
 
