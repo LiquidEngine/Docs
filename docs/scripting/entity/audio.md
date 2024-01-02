@@ -26,6 +26,8 @@ Play audio that is defined in audio source component.
 entity.audio:play()
 ```
 
+---
+
 ### `delete(): void` {#method-delete}
 
 Delete audio source component.

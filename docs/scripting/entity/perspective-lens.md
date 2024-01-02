@@ -76,6 +76,8 @@ local width, height = entity.perspectiveLens:getSensorSize()
 
 The function returns two values -- sensor size width and height values that are positive numbers and measured in mm.
 
+---
+
 ### `setSensorSize(width: number, height: number): void` {#method-setSensorSize}
 
 Set camera sensor size.

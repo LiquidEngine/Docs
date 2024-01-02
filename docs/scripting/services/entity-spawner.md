@@ -25,6 +25,8 @@ local myEntity = entitySpawner:spawnEntity()
 
 Entity object representing the newly spawned prefab.
 
+---
+
 ### `spawnPrefab(prefab: PrefabAsset): Entity` {#method-spawnPrefab}
 
 Spawns prefab to the scene.
@@ -43,6 +45,8 @@ local myEntity = entitySpawner:spawnPrefab(prefab)
 **Returns:**
 
 Entity object representing the **root** entity of newly spawned prefab.
+
+---
 
 ### `spawnSprite(prefab: TextureAsset): Entity` {#method-spawnSprite}
 

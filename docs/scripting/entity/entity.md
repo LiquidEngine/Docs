@@ -1,5 +1,5 @@
 ---
-sidebar_position: 300
+sidebar_position: 400
 ---
 
 # Entity API
@@ -9,7 +9,5 @@ Quoll Engine uses Entity Component System to store and manage the scene. All cre
 Throughout the entity API docs, you will see syntax similar to below being used.
 
 ```lua
-entity.localTransform:getPosition()
+entity.localTransform.position
 ```
-
-It is very important to remember that all the functions that are called from Entity APIs must be called using `:` notation. Otherwise, the script will fail.

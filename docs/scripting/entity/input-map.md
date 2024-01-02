@@ -50,9 +50,13 @@ Boolean value of command.
 - For axis 2d commands, the value is `true` if **any** axis is non-zero
 - For axis 2d commands, the value is `false` if **both** axis values are zero
 
+---
+
 ### `isPressed(command: number): boolean` {#method-isPressed}
 
 Alias of [`getValueBoolean`](#getValueBoolean)
+
+---
 
 ### `getValueAxis2d(command: number): number, number` {#method-getValueAxis2d}
 

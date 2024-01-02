@@ -41,7 +41,18 @@ local mass = entity.rigidBody.mass
 entity.rigidBody.mass = 5.0
 ```
 
-### `isGravityApplied: number` {#prop-isGravityApplied}
+### `inertia: Vector3` {#prop-inertia}
+
+*Only applicable for **dynamic** rigid bodies.*
+
+Inertia of rigid body.
+
+```lua
+local inertia = entity.rigidBody.inertia
+entity.rigidBody.inertia = Vector3.new(0.2, 0.5, 0.2)
+```
+
+### `isGravityApplied: boolean` {#prop-isGravityApplied}
 
 *Only applicable for **dynamic** rigid bodies.*
 
@@ -71,40 +82,6 @@ entity.rigidBody:setDefaultParams()
 
 ---
 
-### `getInertia(): number, number, number` {#method-getInertia}
-
-*Only applicable for **dynamic** rigid bodies.*
-
-Get moment of inertia of rigid body.
-
-```lua
-local x, y, z = entity.rigidBody.getInertia()
-```
-
-**Returns:**
-
-Moment of inertia of rigid body. The function returns three values -- inertia in x, y, and z directions represented in kg x m2.
-
-### `setInertia(x: number, y: number, z: number): void` {#method-setInertia}
-
-*Only applicable for **dynamic** rigid bodies.*
-
-Set moment of inertia inertia of rigid body.
-
-```lua
-entity.rigidBody:setInertia(0.2, 0.5, 0.2)
-```
-
-**Parameters:**
-
-- `x`: Moment of inertia in x direction. The value is a number represented in kg x m2.
-- `y`: Moment of inertia in y direction. The value is a number represented in kg x m2.
-- `z`: Moment of inertia in z direction. The value is a number represented in kg x m2.
-
----
-
----
-
 ### `applyForce(x: number, y: number, z: number): void` {#method-applyForce}
 
 *Only applicable for **dynamic** rigid bodies.*
@@ -121,6 +98,8 @@ entity.rigidBody:applyForce(100.0, 0.0, -20.0)
 - `y`: Force in y direction. The value is measured in Newtons.
 - `z`: Force in z direction. The value is measured in Newtons.
 
+---
+
 ### `applyImpulse(x: number, y: number, z: number): void` {#method-applyImpulse}
 
 *Only applicable for **dynamic** rigid bodies.*
@@ -136,6 +115,8 @@ entity.rigidBody:applyImpulse(100.0, 0.0, -20.0)
 - `x`: Impulse in x direction. The value is measured in Newtons x s.
 - `y`: Impulse in y direction. The value is measured in Newtons x s .
 - `z`: Impulse in z direction. The value is measured in Newtons x s.
+
+---
 
 ### `applyTorque(x: number, y: number, z: number): void` {#method-applyTorque}
 

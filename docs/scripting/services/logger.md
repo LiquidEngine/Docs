@@ -27,6 +27,8 @@ logger.debug("This is a debug message")
 
 - `message`: Log message as string.
 
+---
+
 ### `info(message: string): void` {#method-info}
 
 Logs info message
@@ -39,6 +41,8 @@ logger.info("This is an info message")
 **Parameters:**
 
 - `message`: Log message as string.
+
+---
 
 ### `warning(message: string): void` {#method-warning}
 
@@ -53,6 +57,8 @@ logger.warning("This is a warning message")
 
 - `message`: Log message as string.
 
+---
+
 ### `error(message: string): void` {#method-error}
 
 Logs error message
@@ -65,6 +71,8 @@ logger.debug("This is an error message")
 **Parameters:**
 
 - `message`: Log message as string.
+
+---
 
 ### `fatal(message: string): void` {#method-fatal}
 
