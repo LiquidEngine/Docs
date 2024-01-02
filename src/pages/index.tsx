@@ -30,6 +30,7 @@ function HomepageHeader() {
               <img
                 src={require("@site/static/img/quoll-editor.png").default}
                 alt={siteConfig.title}
+                className="dark:border-0"
               />
             </div>
           </div>

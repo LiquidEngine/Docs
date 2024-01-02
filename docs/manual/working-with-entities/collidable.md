@@ -40,12 +40,6 @@ You can decide to use the collidable shape in simulation, which will include the
 
 When this flag is enabled, the collidable shape will be included in manual queries that are performed from scripts.
 
-:::note Self query
-
-When collidable shape is included in manual queries, the shape will also be included in the queries where the tested shape is the collidable itself.
-
-:::
-
 ## Friction
 
 There are two types of friction -- static and dynamic friction
