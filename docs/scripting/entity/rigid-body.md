@@ -1,5 +1,5 @@
 ---
-sidebarPosition: 800
+sidebar_position: 800
 ---
 
 # Rigid body

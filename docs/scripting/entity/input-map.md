@@ -1,5 +1,5 @@
 ---
-sidebarPosition: 1000
+sidebar_position: 1000
 ---
 
 # Input map
