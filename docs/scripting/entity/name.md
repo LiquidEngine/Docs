@@ -4,26 +4,10 @@ sidebar_position: 200
 
 # Name
 
-Name API allows accessing and modifying name of a component.
-
-## Properties
-
-### `value: string` {#prop-value}
-
-Name of the entity.
+You can read and modify entity name by modifying the `name` property of entity:
 
 ```lua
-local name = entity.name.value
+entity.name = "New name"
 
-entity.name.value = 'Entity name'
-```
-
-## Methods
-
-### `delete() : void` {#method-delete}
-
-Delete name component.
-
-```lua
-entity.name:delete()
+local name = entity.name -- "New name"
 ```

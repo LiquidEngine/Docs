@@ -11,7 +11,7 @@ There are three ways to access entities from scripts.
 All scripts are attached to entities. You can access the entity that the script belongs to using the globally accessible `entity` object:
 
 ```lua
-local name = entity.name.value
+local name = entity.name
 ```
 
 ## Querying entities
