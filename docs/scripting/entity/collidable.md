@@ -65,14 +65,14 @@ This function returns two values:
 1. First value is a boolean value that checks if there was a collision (`true` if collided, `false` otherwise)
 2. Second value provides information about the collision hit. This object has the following structure:
 
-```ts
+```lua
 CollisionHit {
-  normal: { x: number, y: number, z: number }
+  normal: { x: number, y: number, z: number },
+  entity: Entity
 }
 ```
 
 If no collidable does not have collision, the returned value is `nil`.
-
 ---
 
 ### `setDefaultMaterial(): void` {#method-setDefaultMaterial}
