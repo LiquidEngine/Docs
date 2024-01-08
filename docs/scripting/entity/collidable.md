@@ -47,7 +47,7 @@ local logger = game:get('Logger')
 local collided, info = entity.collidable:sweep(0.0, 0.0, 1.0, 0.2)
 
 if collided then
-  logger.log(info.normal.x, info.normal.y, info.normal.z)
+  logger.debug(info.normal.x, info.normal.y, info.normal.z)
 end
 ```
 

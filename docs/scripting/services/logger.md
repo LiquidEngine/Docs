@@ -12,77 +12,87 @@ Logger service provides a way to log meaningful messages about the script. In ed
 
 ![Logger](./img/logger.png)
 
+:::tip Standard print function
+
+The standard global `print` function is available without needing to load the Logger service. This function internally redirects all incoming messages to the debug channel (similar to `Logger.debug`):
+
+```lua
+print('This is a message', 12, myFunction, {hello="world"})
+```
+
+:::
+
 ## Methods
 
-### `debug(message: string): void` {#method-debug}
+### `debug(...messages: any[]): void` {#method-debug}
 
 Logs debug message
 
 ```lua
 local logger = game:get("Logger")
-logger.debug("This is a debug message")
+logger.debug("This is a debug message", 12, myFunction, {hello="world"})
 ```
 
 **Parameters:**
 
-- `message`: Log message as string.
+- `messages`: Log messages as any type
 
 ---
 
-### `info(message: string): void` {#method-info}
+### `info(...messages: any[]): void` {#method-info}
 
 Logs info message
 
 ```lua
 local logger = game:get("Logger")
-logger.info("This is an info message")
+logger.debug("This is an info message", 12, myFunction, {hello="world"})
 ```
 
 **Parameters:**
 
-- `message`: Log message as string.
+- `messages`: Log messages as any type
 
 ---
 
-### `warning(message: string): void` {#method-warning}
+### `warning(...messages: any[]): void` {#method-warning}
 
 Logs warning message
 
 ```lua
 local logger = game:get("Logger")
-logger.warning("This is a warning message")
+logger.debug("This is a warning message", 12, myFunction, {hello="world"})
 ```
 
 **Parameters:**
 
-- `message`: Log message as string.
+- `messages`: Log messages as any type
 
 ---
 
-### `error(message: string): void` {#method-error}
+### `error(...messages: any[]): void` {#method-error}
 
 Logs error message
 
 ```lua
 local logger = game:get("Logger")
-logger.debug("This is an error message")
+logger.debug("This is an error message", 12, myFunction, {hello="world"})
 ```
 
 **Parameters:**
 
-- `message`: Log message as string.
+- `messages`: Log messages as any type
 
 ---
 
-### `fatal(message: string): void` {#method-fatal}
+### `fatal(...messages: any[]): void` {#method-fatal}
 
 Logs fatal message
 
 ```lua
 local logger = game:get("Logger")
-logger.debug("This is a fatal message")
+logger.debug("This is a fatal message", 12, myFunction, {hello="world"})
 ```
 
 **Parameters:**
 
-- `message`: Log message as string.
+- `messages`: Log messages as any type
