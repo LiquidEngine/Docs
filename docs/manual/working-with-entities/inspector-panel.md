@@ -15,9 +15,3 @@ New components can be added by clicking the "Add component" button located at th
 ![Add component](./img/inspector-add-component.png)
 
 Note that you can only add non asset specific components with this button.
-
-### Creating components from assets
-
-Some components are associated with an asset and require you to drag an asset to the "Drag asset here" located at the bottom of the panel.
-
-![Drag asset here](./img/inspector-drag-asset.png)

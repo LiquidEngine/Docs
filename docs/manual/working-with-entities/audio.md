@@ -6,4 +6,6 @@ sidebar_position: 15
 
 ![Audio](./img/audio.png)
 
-You can create or update audio by dragging an audio asset to the drag and drop area. Playing audio is fully controlled by scripting.
+You can update the audio by dragging a new audio asset to the drag and drop area.
+
+Audio playback is fully controlled by scripts.

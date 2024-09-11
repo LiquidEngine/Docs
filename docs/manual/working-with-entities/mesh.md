@@ -8,6 +8,4 @@ Mesh components reference a mesh that is associated with an entity. You can drag
 
 ![Mesh component](./img/mesh.png)
 
-The component in the inspector shows the reference to the component and the number of geometries the component has.
-
-You can create or update a mesh component by dragging a mesh asset to the drag and drop area.
+You can update the mesh by dragging a new mesh asset to the drag and drop area.

@@ -8,12 +8,14 @@ Animators allow controlling animations for an entity using a state machine. The 
 
 ![Animator](./img/animator.png)
 
-In the example image above, the current state is shown as "AttackChop". The table below the current state shows what states the animator can transition from "AttackChop."
+You can update the animator by dragging a new animator asset to the drag and drop area.
 
 ## Testing animator states
 
 In order to test the animations and the animator states, the animator component provides additional controls during simulation mode.
 
 ![Animator simulation mode](./img/animator-simulation-mode.png)
+
+In the example image above, the current state is shown as "Idle". The table below the current state shows what states the animator can transition from "Idle" state.
 
 The new "Toggle" button next to each state allows toggling between animator states. The time, shows unnormalized time of currently running animation. The "Pause" button pauses the animation in current time and the "Reset" button resets the animation time to beginning. You can also manually move the time by dragging the slide.
