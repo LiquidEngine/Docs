@@ -35,7 +35,6 @@ local restitution = entity.collidable.restitution
 entity.collidable.restitution = 1.2
 ```
 
-
 ## Methods
 
 ### `sweep(dx: number, dy: number, dz: number, maxDistance: number): boolean, CollisionHit` {#method-sweep}
@@ -72,7 +71,8 @@ CollisionHit {
 }
 ```
 
-If no collidable does not have collision, the returned value is `nil`.
+If collidable does not have collision, the returned value is `nil`.
+
 ---
 
 ### `setDefaultMaterial(): void` {#method-setDefaultMaterial}
